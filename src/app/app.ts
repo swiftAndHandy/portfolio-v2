@@ -1,7 +1,7 @@
 import {Component, inject, signal} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
 import {TranslocoService} from '@jsverse/transloco';
-import {SeoService} from './core/seo-service';
+import {SeoService} from './core/seo/seo-service';
 
 @Component({
   selector: 'app-root',
