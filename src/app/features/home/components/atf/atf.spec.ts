@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { getTranslocoModule } from '../../../../../testing/transloco-testing/transloco-testing.module';
 
 import { Atf } from './atf';
 
@@ -8,7 +9,10 @@ describe('Atf', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Atf],
+      imports: [
+        getTranslocoModule(),
+        Atf
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Atf);
