@@ -1,5 +1,5 @@
 import {CanActivateFn, Router} from '@angular/router';
-import {inject} from '@angular/core';
+import {DOCUMENT, inject} from '@angular/core';
 import {TranslocoService} from '@jsverse/transloco';
 import {DEFAULT_LANG, LANGUAGES} from './languages';
 
@@ -7,6 +7,7 @@ export const langGuard: CanActivateFn = (route, state) => {
   const transloco = inject(TranslocoService)
   const router = inject(Router)
 
+  const doc = inject(DOCUMENT)
   const lang = route.params['lang'];
 
   if (!LANGUAGES.includes(lang)) {
@@ -15,6 +16,6 @@ export const langGuard: CanActivateFn = (route, state) => {
   }
 
   transloco.setActiveLang(lang);
-  document.documentElement.lang = transloco.getActiveLang();
+  doc.documentElement.lang = transloco.getActiveLang();
   return true;
 };

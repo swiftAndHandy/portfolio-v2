@@ -1,29 +1,37 @@
-<header *transloco="let t;">
-  <div class="limiter">
-    <nav aria-label="t(nav.aria)">
-      <ul>
-        <li>
-          <a [routerLink]="toPath('about')" routerLinkActive="active" ariaCurrentWhenActive="page">
-            {{ t('nav.about') }}</a>
-        </li>
-        <li>
-          <a [routerLink]="toPath('projects')" routerLinkActive="active" ariaCurrentWhenActive="page">
-            {{ t('nav.projects') }}</a>
-        </li>
-        <li>
-          <a [routerLink]="toPath('tech-stack')" routerLinkActive="active" ariaCurrentWhenActive="page">
-            {{ t('nav.stack') }}</a>
-        </li>
-        <li>
-          <a [routerLink]="toPath('contact')" routerLinkActive="active" ariaCurrentWhenActive="page">
-            {{ t('nav.contact') }}</a>
-        </li>
-      </ul>
-    </nav>
+<header #headerEl>
+  <div class="limiter" *transloco="let t">
+    <details class="nav-menu" [attr.open]="isDesktop() || null">
+      <summary [attr.aria-label]="t('nav.menu')">
+        ☰
+      </summary>
+      <nav [attr.aria-label]="t('nav.aria')">
+        <ul>
+          <li>
+            <a [routerLink]="toPath('about')" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{ t('nav.about') }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="toPath('projects')" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{ t('nav.projects') }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="toPath('tech-stack')" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{ t('nav.stack') }}
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="toPath('contact')" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{ t('nav.contact') }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </details>
 
     <div class="controls">
       <app-lang-menu />
-
       <button
         (click)="colorScheme.toggle()"
         [attr.aria-label]="t(colorScheme.darkModeIsActive() ? 'nav.lightMode' : 'nav.darkMode')"

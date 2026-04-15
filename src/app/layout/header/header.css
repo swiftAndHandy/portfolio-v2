@@ -4,6 +4,30 @@ icon-sun, icon-moon {
   height: 1.25rem;
 }
 
+header {
+  container-type: inline-size;
+}
+
+@container (width <= 600px) {
+  details.nav-menu > summary {
+    display: flex;
+  }
+
+  details.nav-menu:not([open]) nav {
+    display: none;
+  }
+
+  details.nav-menu > nav {
+
+  }
+}
+
+@container (width > 600px) {
+  details.nav-menu > summary {
+    display: none;
+  }
+}
+
 ul {
   list-style: none;
   margin: 0;

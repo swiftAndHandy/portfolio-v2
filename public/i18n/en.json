@@ -21,7 +21,8 @@
   "home": {
     "atf": {
       "title": "Missing value for 'home.atf.title'"
-    }
+    },
+    "title": "Test"
   },
   "overlay": {
     "open": "Missing value for 'overlay.open'"
