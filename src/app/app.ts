@@ -1,11 +1,13 @@
 import {Component, inject, signal} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
-import {TranslocoService} from '@jsverse/transloco';
+import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {SeoService} from './core/seo/seo-service';
+import {Header} from './layout/header/header';
+import {Footer} from './layout/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, TranslocoDirective, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

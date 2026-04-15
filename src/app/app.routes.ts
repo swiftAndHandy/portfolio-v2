@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import {langGuard} from './core/i18n/lang-guard';
-import {Atf} from './features/home/components/atf/atf';
+import {Home} from './features/home/home';
+import {PrivacyPolicy} from './features/legal/privacy-policy';
+import {LegalNotice} from './features/legal/legal-notice';
 export const routes: Routes = [
   {
     path: ':lang',
@@ -8,7 +10,20 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: Atf
+        component: Home
+      },
+      {
+        path: 'legal',
+        children: [
+          {
+            path: 'privacy-policy',
+            component: PrivacyPolicy
+          },
+          {
+            path: 'legal-notice',
+            component: LegalNotice
+          }
+        ]
       }
     ]
   },

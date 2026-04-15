@@ -1,10 +1,18 @@
 {
+  "ally": {
+    "skipNav": "Go to content"
+  },
+  "nav": {
+    "projects": {
+      "link": "Projects"
+    }
+  },
   "home": {
-    "title": "test2",
     "atf": {
       "title": "Hi, I'm Andre!",
       "subtitle": "Web- and iOS Developer from Deutschland",
       "cta": "View projects"
-    }
+    },
+    "title": "test2"
   }
 }

@@ -1,1 +1,10 @@
-<p>footer works!</p>
+<header>
+  <nav aria-label="" *transloco="let t;">
+    <ul>
+      <li>
+        <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
+          {{ t('nav.projects.link') }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
