@@ -2,7 +2,7 @@ import {DOCUMENT, inject, Injectable} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {Meta, Title} from '@angular/platform-browser';
 import {TranslocoService} from '@jsverse/transloco';
-import {filter, take} from 'rxjs';
+import {combineLatestWith, filter, take} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,16 +14,19 @@ export class SeoService {
   private meta = inject(Meta);
   private transloco = inject(TranslocoService);
 
-  init() {
-    this.router.events
-      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
-      .subscribe((event) => {
-        const url = `https://veltens.info${event.urlAfterRedirects}`;
+  private get baseURL(): string {
+    return `${this.doc.location.protocol}//${this.doc.location.host}`;
+  }
 
-        this.setCanonical(url);
-        this.setLang();
-        this.setTitle();
-      });
+  init() {
+    this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      combineLatestWith(this.transloco.langChanges$)
+    ).subscribe(([event]) => {
+      const url = `${this.baseURL}${event.urlAfterRedirects}`;
+      this.setCanonical(url)
+      this.updateTitle()
+    });
   }
 
   private setCanonical(url: string) {
@@ -38,19 +41,11 @@ export class SeoService {
     link.href = url;
   }
 
-  private setLang() {
-    const lang = this.transloco.getActiveLang();
-    this.doc.documentElement.lang = lang;
-  }
-
-  private setTitle() {
+  private updateTitle() {
     const key = this.getRouteKey();
-
-    this.transloco.langChanges$.subscribe(() => {
-      this.transloco.selectTranslate(`${key}.title`)
-        .pipe(take(1))
-        .subscribe(title => this.title.setTitle(title));
-    });
+    this.transloco.selectTranslate(`${key}.title`)
+      .pipe(take(1))
+      .subscribe(t => this.title.setTitle(t));
   }
 
   private getRouteKey(): string {

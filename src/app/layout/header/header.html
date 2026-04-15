@@ -1,10 +1,39 @@
-<header>
-  <nav aria-label="" *transloco="let t;">
-    <ul>
-      <li>
-        <a [routerLink]="toPath('projects')" routerLinkActive="active" ariaCurrentWhenActive="page">
-          {{ t('nav.projects.link') }}</a>
-      </li>
-    </ul>
-  </nav>
+<header *transloco="let t;">
+  <div class="limiter">
+    <nav aria-label="t(nav.aria)">
+      <ul>
+        <li>
+          <a [routerLink]="toPath('about')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.about') }}</a>
+        </li>
+        <li>
+          <a [routerLink]="toPath('projects')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.projects') }}</a>
+        </li>
+        <li>
+          <a [routerLink]="toPath('tech-stack')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.stack') }}</a>
+        </li>
+        <li>
+          <a [routerLink]="toPath('contact')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.contact') }}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="controls">
+      <app-lang-menu />
+
+      <button
+        (click)="colorScheme.toggle()"
+        [attr.aria-label]="t(colorScheme.darkModeIsActive() ? 'nav.lightMode' : 'nav.darkMode')"
+        [attr.aria-pressed]="colorScheme.darkModeIsActive()">
+        @if (colorScheme.darkModeIsActive()) {
+          <icon-sun />
+        } @else {
+          <icon-moon />
+        }
+      </button>
+    </div>
+  </div>
 </header>

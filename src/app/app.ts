@@ -1,27 +1,37 @@
-import {Component, inject, signal} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {Component, DOCUMENT, effect, inject, signal} from '@angular/core';
+import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {SeoService} from './core/seo/seo-service';
 import {Header} from './layout/header/header';
 import {Footer} from './layout/footer/footer';
-import {Overlay} from './shared/overlay/overlay';
-import {LegalNotice} from './features/legal/legal-notice';
-import {TrafficLightBar} from './shared/traffic-light-bar/traffic-light-bar';
+import {toSignal} from '@angular/core/rxjs-interop';
+import {filter} from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslocoDirective, Header, Footer, Overlay, LegalNotice, TrafficLightBar],
+  imports: [RouterOutlet, TranslocoDirective, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  private translocoService = inject(TranslocoService);
+  private doc = inject(DOCUMENT);
+  private router = inject(Router);
   private seoService = inject(SeoService);
-  protected readonly title = signal('portfolio-v2');
+  private translocoService = inject(TranslocoService);
+
+  private lang = toSignal(this.translocoService.langChanges$);
+
   constructor() {
-    this.translocoService.langChanges$.subscribe(langChanges => {
-      document.documentElement.lang = langChanges;
+    effect(() => {
+      const lang = this.lang();
+      if (lang) this.doc.documentElement.lang = lang;
     })
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    ).subscribe(() => {
+      this.doc.getElementById('main-content')?.focus();
+    });
 
     this.seoService.init();
   }

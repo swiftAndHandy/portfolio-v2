@@ -1,0 +1,13 @@
+<details class="lang-switcher" *transloco="let t">
+  <summary [attr.aria-label]="t('nav.langSwitcher')">
+    <icon-globe />
+    <icon-chevron-down />
+  </summary>
+  <ul>
+    @for (lang of languages; track lang) {
+      <li>
+        <button (click)="switchLang(lang)">{{ lang.toUpperCase() }}</button>
+      </li>
+    }
+  </ul>
+</details>

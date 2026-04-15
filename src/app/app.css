@@ -1,3 +1,9 @@
+main {
+  &:focus {
+    outline: none;
+  }
+}
+
 .skip-nav {
   position: absolute;
   top: -100%;

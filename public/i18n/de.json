@@ -2,18 +2,21 @@
   "a11y": {
     "skipNav": "Zum Inhalt springen"
   },
-  "overlay": {
-    "open": "{{ target }} anzeigen"
-  },
   "action": {
     "close": "Close",
-    "enterFullscreen": "Open {{ target }} in fullscreen",
-    "exitFullscreen": "Close fullscreen for {{ target }}"
+    "exitFullscreen": "Close fullscreen for {{ target }}",
+    "enterFullscreen": "Open {{ target }} in fullscreen"
   },
   "nav": {
-    "projects": {
-      "link": "Projekte"
-    }
+    "about": "Vorstellung",
+    "projects": "Projekte",
+    "stack": "Techstack",
+    "contact": "Kontakt",
+    "langSwitcher": "Sprachauswahl",
+    "lightMode": "Helles Erscheiungsbild aktivieren",
+    "darkMode": "Dunkles Erscheinungsbild aktivieren",
+    "legalNotice": "Missing value for 'nav.legalNotice'",
+    "privacyPolicy": "Missing value for 'nav.privacyPolicy'"
   },
   "home": {
     "atf": {
@@ -22,5 +25,8 @@
       "cta": "Projekte ansehen"
     },
     "title": "test"
+  },
+  "overlay": {
+    "open": "{{ target }} anzeigen"
   }
 }

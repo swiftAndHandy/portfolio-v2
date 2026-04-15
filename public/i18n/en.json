@@ -2,22 +2,28 @@
   "a11y": {
     "skipNav": "Missing value for 'a11y.skipNav'"
   },
-  "overlay": {
-    "open": "Missing value for 'overlay.open'"
-  },
   "action": {
     "close": "Missing value for 'action.close'",
-    "enterFullscreen": "Missing value for 'action.enterFullscreen'",
-    "exitFullscreen": "Missing value for 'action.exitFullscreen'"
+    "exitFullscreen": "Missing value for 'action.exitFullscreen'",
+    "enterFullscreen": "Missing value for 'action.enterFullscreen'"
   },
   "nav": {
-    "projects": {
-      "link": "Missing value for 'nav.projects.link'"
-    }
+    "about": "Missing value for 'nav.about'",
+    "projects": "Missing value for 'nav.projects'",
+    "stack": "Missing value for 'nav.stack'",
+    "contact": "Missing value for 'nav.contact'",
+    "langSwitcher": "Missing value for 'nav.langSwitcher'",
+    "lightMode": "Missing value for 'nav.lightMode'",
+    "darkMode": "Missing value for 'nav.darkMode'",
+    "legalNotice": "Missing value for 'nav.legalNotice'",
+    "privacyPolicy": "Missing value for 'nav.privacyPolicy'"
   },
   "home": {
     "atf": {
       "title": "Missing value for 'home.atf.title'"
     }
+  },
+  "overlay": {
+    "open": "Missing value for 'overlay.open'"
   }
 }

@@ -1,0 +1,29 @@
+icon-globe, icon-chevron-down {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+summary {
+  gap: 0.25rem;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.lang-switcher {
+  position: relative;
+  & ul {
+    position: absolute;
+    right: 0;
+    list-style: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}
