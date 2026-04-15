@@ -7,5 +7,26 @@
     border-radius: 50%;
     border: none;
     box-shadow: inset 0 0 0 0.5px var(--shadow-inset);
+
+    &.red {
+      background-color: #FF5F57;
+      &:hover {
+        background-color: #BF4943;
+      }
+    }
+
+    &.yellow {
+      background-color: #FEBC2E;
+      &:hover {
+        background-color: #BF9122;
+      }
+    }
+
+    &.green {
+      background-color: #28C840;
+      &:hover {
+        background-color: #1FA025;
+      }
+    }
   }
 }

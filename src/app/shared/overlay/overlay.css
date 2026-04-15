@@ -1,8 +1,24 @@
+dialog {
+  --fullscreen-spacing: 4px;
+  max-width: unset;
+  max-height: unset;
+  width: 50vw;
+  height: 50dvh;
+  border-radius: 8px;
+  box-sizing: border-box;
+  top: 50dvh;
+  left: 50dvw;
+  translate: -50% -50%;
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, translate 0.3s ease, border-radius 0.3s ease;
+}
+
 dialog.is-fullscreen {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100vw;
-  max-height: 100vh;
-  margin: 0;
-  border-radius: 0;
+  border-radius: 18px;
+  height: calc(100dvh - var(--fullscreen-spacing) * 2);
+  max-height: calc(100dvh - var(--fullscreen-spacing) * 2);
+  max-width: calc(100vw - var(--fullscreen-spacing) * 2);
+  width: calc(100vw - var(--fullscreen-spacing) * 2);
+  top: 0;
+  left: 0;
+  translate: 0;
 }
