@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TrafficLightBar } from './traffic-light-bar';
+import {getTranslocoModule} from '../../../testing/transloco-testing/transloco-testing.module';
 
 describe('TrafficLightBar', () => {
   let component: TrafficLightBar;
@@ -8,7 +9,10 @@ describe('TrafficLightBar', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TrafficLightBar],
+      imports: [
+        getTranslocoModule(),
+        TrafficLightBar
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TrafficLightBar);

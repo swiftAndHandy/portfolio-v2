@@ -25,14 +25,14 @@ export class ColorSchemeService {
 
   private getInitialScheme(): boolean {
     if (!this.isBrowser) return false;
-    const stored = localStorage.getItem(this.STORAGE_KEY);
+    const stored = this.doc.defaultView?.localStorage?.getItem(this.STORAGE_KEY);
     if (stored !== null) return stored === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return this.doc.defaultView?.matchMedia('(prefers-color-scheme: dark)')?.matches ?? false;
   }
 
   private applyScheme(dark: boolean) {
     if (!this.isBrowser) return;
     this.doc.documentElement.classList.toggle('dark', dark);
-    localStorage.setItem(this.STORAGE_KEY, dark ? 'dark' : 'light');
+    this.doc.defaultView?.localStorage?.setItem(this.STORAGE_KEY, dark ? 'dark' : 'light');
   }
 }
