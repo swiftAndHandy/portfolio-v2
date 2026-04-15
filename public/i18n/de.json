@@ -6,7 +6,9 @@
     "open": "{{ target }} anzeigen"
   },
   "action": {
-    "close": "Missing value for 'action.close'"
+    "close": "Close",
+    "exitFullscreen": "Open {{ target }} in fullscreen",
+    "enterFullscreen": "Close fullscreen for {{ target }}"
   },
   "nav": {
     "projects": {
@@ -20,8 +22,5 @@
       "cta": "Projekte ansehen"
     },
     "title": "test"
-  },
-  "actions": {
-    "close": "Missing value for 'actions.close'"
   }
 }

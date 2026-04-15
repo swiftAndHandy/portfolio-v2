@@ -1,27 +1,23 @@
 {
   "a11y": {
-    "skipNav": "Go to content"
+    "skipNav": "Missing value for 'a11y.skipNav'"
   },
   "overlay": {
-    "open": "Open {{ target }}"
+    "open": "Missing value for 'overlay.open'"
   },
   "action": {
-    "close": "Missing value for 'action.close'"
+    "close": "Missing value for 'action.close'",
+    "exitFullscreen": "Missing value for 'action.exitFullscreen'",
+    "enterFullscreen": "Missing value for 'action.enterFullscreen'"
   },
   "nav": {
     "projects": {
-      "link": "Projects"
+      "link": "Missing value for 'nav.projects.link'"
     }
   },
   "home": {
     "atf": {
-      "title": "Hi, I'm Andre!",
-      "subtitle": "Web- and iOS Developer from Deutschland",
-      "cta": "View projects"
-    },
-    "title": "test2"
-  },
-  "actions": {
-    "close": "Missing value for 'actions.close'"
+      "title": "Missing value for 'home.atf.title'"
+    }
   }
 }

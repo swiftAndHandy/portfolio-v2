@@ -1,7 +1,10 @@
 <a href="#main-content" class="skip-nav" transloco="a11y.skipNav"></a>
 <app-header />
 <app-overlay #overlay>
-  <app-traffic-light-bar (close)="overlay.close()" (fullscreen)="overlay.toggleFullscreen()"/>
+  <app-traffic-light-bar
+    (close)="overlay.close()"
+    (fullscreen)="overlay.toggleFullscreen()"
+    [isFullscreen]="overlay.isFullscreen()"/>
   <app-legal-notice />
 </app-overlay>
 

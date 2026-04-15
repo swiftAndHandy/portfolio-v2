@@ -1,4 +1,4 @@
-import {Component, contentChild, effect, ElementRef, viewChild} from '@angular/core';
+import {Component, contentChild, effect, ElementRef, signal, viewChild} from '@angular/core';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {TrafficLightBar} from '../traffic-light-bar/traffic-light-bar';
 
@@ -23,10 +23,14 @@ export class Overlay {
   private dialogRef = viewChild<ElementRef<HTMLDialogElement>>('dialog');
   private trafficLight = contentChild(TrafficLightBar);
 
+  isFullscreen = signal(false);
+
   open() { this.dialogRef()?.nativeElement.showModal(); }
   close() { this.dialogRef()?.nativeElement.close(); }
 
   toggleFullscreen() {
     this.dialogRef()?.nativeElement.classList.toggle('is-fullscreen');
+    this.isFullscreen.update(v => !v);
+    console.log(this.isFullscreen())
   }
 }
