@@ -20,6 +20,7 @@ export class Header {
   private headerRef = viewChild<ElementRef>('headerEl')
 
   isDesktop = signal(false);
+  isMenuOpen = signal(false);
 
   constructor() {
     afterNextRender(() => {

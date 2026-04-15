@@ -1,22 +1,29 @@
 {
   "a11y": {
-    "skipNav": "Missing value for 'a11y.skipNav'"
+    "skipNav": "Jump to content"
   },
   "action": {
-    "close": "Missing value for 'action.close'",
-    "exitFullscreen": "Missing value for 'action.exitFullscreen'",
-    "enterFullscreen": "Missing value for 'action.enterFullscreen'"
+    "close": "Close",
+    "exitFullscreen": "Close fullscreen for {{ target }}",
+    "enterFullscreen": "Open {{ target }} in fullscreen"
   },
   "nav": {
+    "closeMenu": "Close Menu",
+    "openMenu": "Open Menu",
     "about": "Missing value for 'nav.about'",
     "projects": "Missing value for 'nav.projects'",
     "stack": "Missing value for 'nav.stack'",
     "contact": "Missing value for 'nav.contact'",
-    "langSwitcher": "Missing value for 'nav.langSwitcher'",
-    "lightMode": "Missing value for 'nav.lightMode'",
-    "darkMode": "Missing value for 'nav.darkMode'",
-    "legalNotice": "Missing value for 'nav.legalNotice'",
-    "privacyPolicy": "Missing value for 'nav.privacyPolicy'"
+    "mainNav": "Main Navigation",
+    "lightMode": "Display in light mode",
+    "darkMode": "Display in dark mode",
+    "langSwitcher": "Language Picker",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "langMenu": {
+    "de": "German",
+    "en": "English"
   },
   "home": {
     "atf": {

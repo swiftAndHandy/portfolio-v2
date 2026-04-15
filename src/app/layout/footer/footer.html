@@ -1,14 +1,16 @@
-<header>
-  <nav aria-label="" *transloco="let t;">
-    <ul>
-      <li>
-        <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
-          {{ t('nav.legalNotice') }}</a>
-      </li>
-      <li>
-        <a [routerLink]="toPath('legal/pricacy-policy')" routerLinkActive="active" ariaCurrentWhenActive="page">
-          {{ t('nav.privacyPolicy') }}</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<footer>
+  <div class="limiter">
+    <nav aria-label="" *transloco="let t;">
+      <ul>
+        <li>
+          <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.legalNotice') }}</a>
+        </li>
+        <li>
+          <a [routerLink]="toPath('legal/privacy-policy')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.privacyPolicy') }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>

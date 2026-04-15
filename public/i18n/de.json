@@ -4,19 +4,26 @@
   },
   "action": {
     "close": "Close",
-    "exitFullscreen": "Close fullscreen for {{ target }}",
-    "enterFullscreen": "Open {{ target }} in fullscreen"
+    "exitFullscreen": "Schließe Vollbild für {{ target }}",
+    "enterFullscreen": "Öffne {{ target }} im Vollbild"
   },
   "nav": {
+    "closeMenu": "Menü schließen",
+    "openMenu": "Menü öffnen",
     "about": "Vorstellung",
     "projects": "Projekte",
     "stack": "Techstack",
     "contact": "Kontakt",
-    "langSwitcher": "Sprachauswahl",
+    "mainNav": "Hauptnavigation",
     "lightMode": "Helles Erscheiungsbild aktivieren",
     "darkMode": "Dunkles Erscheinungsbild aktivieren",
-    "legalNotice": "Missing value for 'nav.legalNotice'",
-    "privacyPolicy": "Missing value for 'nav.privacyPolicy'"
+    "langSwitcher": "Sprachauswahl",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  },
+  "langMenu": {
+    "de": "Deutsch",
+    "en": "Englisch"
   },
   "home": {
     "atf": {

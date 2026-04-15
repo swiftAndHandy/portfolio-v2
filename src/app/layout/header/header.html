@@ -1,10 +1,11 @@
 <header #headerEl>
   <div class="limiter" *transloco="let t">
     <details class="nav-menu" [attr.open]="isDesktop() || null">
-      <summary [attr.aria-label]="t('nav.menu')">
+      <summary [attr.aria-label]="t(isMenuOpen() ? 'nav.closeMenu' : 'nav.openMenu')"
+      (click)="isMenuOpen.update(v => !v)">
         ☰
       </summary>
-      <nav [attr.aria-label]="t('nav.aria')">
+      <nav [attr.aria-label]="t('nav.mainNav')">
         <ul>
           <li>
             <a [routerLink]="toPath('about')" routerLinkActive="active" ariaCurrentWhenActive="page">

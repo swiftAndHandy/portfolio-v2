@@ -18,7 +18,7 @@ summary {
 .lang-switcher {
   position: relative;
   & ul {
-    position: fixed;
+    position: absolute;
     right: 0;
     list-style: none;
   }
