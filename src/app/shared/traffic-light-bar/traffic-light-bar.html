@@ -1,0 +1,5 @@
+<div *transloco="let t">
+  <button class="red" (click)="close.emit()" [attr.aria-label]="t('action.close')"></button>
+  <button class="yellow" (click)="close.emit()" [attr.aria-label]="t('action.close')"></button>
+  <button class="green" (click)="fullscreen.emit()"></button>
+</div>

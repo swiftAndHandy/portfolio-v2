@@ -1,6 +1,12 @@
 {
-  "ally": {
+  "a11y": {
     "skipNav": "Go to content"
+  },
+  "overlay": {
+    "open": "Open {{ target }}"
+  },
+  "action": {
+    "close": "Missing value for 'action.close'"
   },
   "nav": {
     "projects": {
@@ -14,5 +20,8 @@
       "cta": "View projects"
     },
     "title": "test2"
+  },
+  "actions": {
+    "close": "Missing value for 'actions.close'"
   }
 }

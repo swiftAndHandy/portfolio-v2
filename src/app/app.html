@@ -1,5 +1,11 @@
-<a href="#main-content" class="skip-nav" transloco="ally.skipNav"></a>
+<a href="#main-content" class="skip-nav" transloco="a11y.skipNav"></a>
 <app-header />
+<app-overlay #overlay>
+  <app-traffic-light-bar (close)="overlay.close()" (fullscreen)="overlay.toggleFullscreen()"/>
+  <app-legal-notice />
+</app-overlay>
+
+<button (click)=overlay.open() transloco="overlay.open" [translocoParams]="{ target: 'Legal' }"></button>
 <main id="main-content" tabindex="-1">
   <router-outlet />
 </main>
