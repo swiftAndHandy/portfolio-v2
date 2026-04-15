@@ -7,8 +7,8 @@
   },
   "action": {
     "close": "Close",
-    "exitFullscreen": "Open {{ target }} in fullscreen",
-    "enterFullscreen": "Close fullscreen for {{ target }}"
+    "enterFullscreen": "Open {{ target }} in fullscreen",
+    "exitFullscreen": "Close fullscreen for {{ target }}"
   },
   "nav": {
     "projects": {

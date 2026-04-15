@@ -7,8 +7,8 @@
   },
   "action": {
     "close": "Missing value for 'action.close'",
-    "exitFullscreen": "Missing value for 'action.exitFullscreen'",
-    "enterFullscreen": "Missing value for 'action.enterFullscreen'"
+    "enterFullscreen": "Missing value for 'action.enterFullscreen'",
+    "exitFullscreen": "Missing value for 'action.exitFullscreen'"
   },
   "nav": {
     "projects": {
