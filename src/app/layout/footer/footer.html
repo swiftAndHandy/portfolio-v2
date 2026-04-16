@@ -1,16 +1,27 @@
 <footer>
-  <div class="limiter">
-    <nav aria-label="" *transloco="let t;">
-      <ul>
-        <li>
-          <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
-            {{ t('nav.legalNotice') }}</a>
-        </li>
-        <li>
-          <a [routerLink]="toPath('legal/privacy-policy')" routerLinkActive="active" ariaCurrentWhenActive="page">
-            {{ t('nav.privacyPolicy') }}</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="limiter" *transloco="let t;">
+    <div class="links">
+      <a href=""
+         target="_blank"
+         rel="noopener norefferer"
+         [attr.aria-label]="t('footer.linkedIn')">
+        <icon-linkedin aria-hidden="true"/>
+      </a>
+
+      <nav [attr.aria-label]="t('footer.legalNav')">
+        <ul>
+          <li>
+            <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{ t('nav.legalNotice') }}</a>
+          </li>
+          <li>
+            <a [routerLink]="toPath('legal/privacy-policy')" routerLinkActive="active" ariaCurrentWhenActive="page">
+              {{ t('nav.privacyPolicy') }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="copyright">© {{ year }} Andre Veltens</p>
   </div>
 </footer>
