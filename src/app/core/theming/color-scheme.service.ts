@@ -5,7 +5,7 @@ import {isPlatformBrowser} from '@angular/common';
   providedIn: 'root',
 })
 export class ColorSchemeService {
-    private doc = inject(DOCUMENT);
+  private doc = inject(DOCUMENT);
   private platformId= inject(PLATFORM_ID);
   private isBrowser = isPlatformBrowser(this.platformId);
 
