@@ -32,4 +32,9 @@ export class Overlay {
     this.dialogRef()?.nativeElement.classList.toggle('is-fullscreen');
     this.isFullscreen.update(v => !v);
   }
+
+  openFullscreen() {
+    this.dialogRef()?.nativeElement.classList.add('is-fullscreen');
+    this.isFullscreen.set(true);
+  }
 }

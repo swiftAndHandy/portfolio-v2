@@ -1,1 +1,10 @@
-<p>project-detail works!</p>
+<article>
+  <header>
+    <h2>{{project().title}}</h2>
+    <ul class="techstack">
+      @for (tag of project().detailTags; track tag) {
+        <li [class]="'tag --' + tag.toLowerCase()">{{tag}}</li>
+      }
+    </ul>
+  </header>
+</article>

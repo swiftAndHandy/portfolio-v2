@@ -3,6 +3,7 @@ import {langGuard} from './core/i18n/lang-guard';
 import {Home} from './features/home/home';
 import {PrivacyPolicy} from './features/legal/privacy-policy';
 import {LegalNotice} from './features/legal/legal-notice';
+import {Projects} from './features/projects/projects';
 export const routes: Routes = [
   {
     path: ':lang',
@@ -11,6 +12,10 @@ export const routes: Routes = [
       {
         path: '',
         component: Home
+      },
+      {
+        path: 'projects',
+        component: Projects
       },
       {
         path: 'legal',

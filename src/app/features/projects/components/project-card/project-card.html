@@ -1,1 +1,32 @@
-<p>project-card works!</p>
+@if (!isCollapsed()) {
+  <article>
+    <div class="window-chrome">
+      <app-traffic-light-bar
+        (close)="isCollapsed.set(true)"
+        (fullscreen)="overlay.open(); overlay.openFullscreen()"
+        [isFullscreen]="false" />
+      <span class="window-title">{{ project().title }}</span>
+    </div>
+    <div class="window-content" (click)="overlay.open()" role="button" tabindex="0">
+      <img [src]="project().screenshots[0]?.url" [alt]="project().screenshots[0]?.alt" />
+      <ul class="tag-list">
+        @for (tag of project().overviewTags; track tag) {
+          <li [class]="'tag --' + tag.toLowerCase()">{{ tag }}</li>
+        }
+      </ul>
+      <p>{{ project().description[langService.currentLang()] }}</p>
+    </div>
+  </article>
+} @else {
+  <button class="project-icon" (click)="isCollapsed.set(false)">
+    <img [src]="project().logo.url" [alt]="project().logo.alt" />
+  </button>
+}
+
+<app-overlay #overlay>
+  <app-traffic-light-bar
+    (close)="overlay.close()"
+    (fullscreen)="overlay.toggleFullscreen()"
+    [isFullscreen]="false" />
+  <app-project-detail [project]="project()"/>
+</app-overlay>

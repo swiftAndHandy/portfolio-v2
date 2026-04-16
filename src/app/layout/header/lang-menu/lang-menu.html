@@ -6,7 +6,11 @@
   <ul>
     @for (lang of languages; track lang) {
       <li>
-        <button (click)="switchLang(lang)" [attr.aria-label]="t('langMenu.' + lang)">{{ lang.toUpperCase() }}</button>
+        <button (click)="switchLang(lang)"
+                [attr.aria-current]="lang === langService.currentLang() ? 'true' : null"
+                [attr.aria-label]="t('langMenu.' + lang)">
+          {{ lang.toUpperCase() }}
+        </button>
       </li>
     }
   </ul>

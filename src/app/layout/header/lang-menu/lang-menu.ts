@@ -18,7 +18,7 @@ import {GlobeIcon} from '../../../shared/icons/globe';
   styleUrl: './lang-menu.css',
 })
 export class LangMenu {
-  private langService = inject(LangService);
+  protected langService = inject(LangService);
   private translocoService = inject(TranslocoService);
   private router = inject(Router);
   private location = inject(Location);

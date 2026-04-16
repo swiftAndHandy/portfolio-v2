@@ -1,0 +1,16 @@
+.tag {
+  --tag-color: gray;
+  --tag-text-color: black;
+  background-color: color-mix(in srgb, var(--tag-color) 10%, transparent);
+  color: var(--tag-text-color);
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 1px solid color-mix(in srgb, var(--tag-color) 20%, transparent);
+
+  &.--swift { --tag-color: #F05138; --tag-text-color: #F05138; }
+  &.--swiftui { --tag-color: #0A84FF; --tag-text-color: #0A84FF; }
+  &.--angular { --tag-color: #DD0031; --tag-text-color: #DD0031; }
+}
