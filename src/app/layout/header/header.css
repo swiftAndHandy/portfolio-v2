@@ -8,7 +8,7 @@ header {
   container-type: inline-size;
 }
 
-@container (width <= 600px) {
+@container (width <= 768px) {
   details.nav-menu > summary {
     display: flex;
   }
@@ -22,7 +22,7 @@ header {
   }
 }
 
-@container (width > 600px) {
+@container (width > 768px) {
   details.nav-menu > summary {
     display: none;
   }
@@ -42,7 +42,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--max-width);
+  max-width: var(--max-desktop-width);
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;

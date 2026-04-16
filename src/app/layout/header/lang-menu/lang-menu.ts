@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, ElementRef, inject, viewChild} from '@angular/core';
 import {LANGUAGES} from '../../../core/i18n/languages';
 import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {Router} from '@angular/router';
@@ -22,7 +22,7 @@ export class LangMenu {
   private translocoService = inject(TranslocoService);
   private router = inject(Router);
   private location = inject(Location);
-
+  private detailsRef = viewChild<ElementRef>('langDetails');
   protected languages = LANGUAGES;
 
   switchLang(lang: string) {
@@ -32,5 +32,9 @@ export class LangMenu {
     );
     this.location.replaceState(newUrl);
     this.translocoService.setActiveLang(lang);
+    const details = this.detailsRef()?.nativeElement;
+    details.removeAttribute('open');
+    details.querySelector('summary')?.focus();
+
   }
 }
