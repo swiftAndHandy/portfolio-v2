@@ -15,10 +15,19 @@ export const projects: Project[] =  [
       en: "Lorem Ipsum.",
     },
     logo: {
-      url: "",
+      url: "/assets/img/hydroproof_logo.webp",
       alt: "HydroProof.app"
     },
-    screenshots: [],
+    thumbnail: {
+      url: "/assets/img/hydroproof_thumbnail.webp",
+      alt: ""
+    },
+    screenshot:
+      {
+        url: "/assets/img/hydroproof_screenshot.webp",
+        alt: "HydroProof",
+      }
+    ,
     liveUrl: "",
     githubUrl: "",
     slug: "hydroproof",

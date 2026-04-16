@@ -10,11 +10,15 @@ export interface Project {
   logo: {
     url: string,
     alt: string
-  }
-  screenshots: {
+  };
+  thumbnail: {
     url: string
     alt: string
-  }[];
+  };
+  screenshot: {
+    url: string
+    alt: string
+  };
   liveUrl?: string;
   githubUrl?: string;
   slug?: string;

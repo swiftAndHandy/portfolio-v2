@@ -21,15 +21,25 @@
     "legalNotice": "Legal Notice",
     "privacyPolicy": "Privacy Policy"
   },
-  "langMenu": {
-    "de": "German",
-    "en": "English"
+  "footer": {
+    "linkedIn": "Missing value for 'footer.linkedIn'",
+    "legalNav": "Missing value for 'footer.legalNav'"
+  },
+  "project": {
+    "learnMore": "Missing value for 'project.learnMore'"
+  },
+  "projects": {
+    "title": "Projects"
   },
   "home": {
     "atf": {
       "title": "Missing value for 'home.atf.title'"
     },
-    "title": "Test"
+    "title": "Portfolio"
+  },
+  "langMenu": {
+    "de": "German",
+    "en": "English"
   },
   "overlay": {
     "open": "Missing value for 'overlay.open'"

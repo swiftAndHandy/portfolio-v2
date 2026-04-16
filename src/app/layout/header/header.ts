@@ -25,10 +25,10 @@ export class Header {
   constructor() {
     afterNextRender(() => {
       const el = this.headerRef()?.nativeElement;
-      this.isDesktop.set(el.offsetWidth > 600);
+      this.isDesktop.set(el.offsetWidth > 768);
 
       const observer = new ResizeObserver(entries => {
-        this.isDesktop.set(entries[0].contentRect.width > 600);
+        this.isDesktop.set(entries[0].contentRect.width > 768);
       });
       observer.observe(el);
       this.destroyRef.onDestroy(() => observer.disconnect());

@@ -16,10 +16,6 @@ header {
   details.nav-menu:not([open]) nav {
     display: none;
   }
-
-  details.nav-menu > nav {
-
-  }
 }
 
 @container (width > 768px) {

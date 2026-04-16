@@ -21,9 +21,15 @@
     "legalNotice": "Impressum",
     "privacyPolicy": "Datenschutz"
   },
-  "langMenu": {
-    "de": "Deutsch",
-    "en": "Englisch"
+  "footer": {
+    "linkedIn": "LinkedIn öffnen (extern, neues Fenster)",
+    "legalNav": "Rechtliche Informationen"
+  },
+  "project": {
+    "learnMore": "Mehr erfahren…"
+  },
+  "projects": {
+    "title": "Projekte"
   },
   "home": {
     "atf": {
@@ -31,7 +37,11 @@
       "subtitle": "Web- und iOS Entwickler aus Deutschland",
       "cta": "Projekte ansehen"
     },
-    "title": "test"
+    "title": "Portfolio"
+  },
+  "langMenu": {
+    "de": "Deutsch",
+    "en": "Englisch"
   },
   "overlay": {
     "open": "{{ target }} anzeigen"

@@ -1,4 +1,48 @@
 .tag-list {
   display: flex;
   list-style: none;
+  padding-inline-start: 0;
+  margin-top: -12px;
+  gap: 6px;
+}
+
+article {
+  container-type: inline-size;
+  container-name: project-card;
+  border: 1px solid light-dark(black, white);
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.window-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.thumbnail {
+  flex: 0 0 40%;
+  min-width: 120px;
+  max-width: 300px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@container project-card (width >= 480px) {
+  .window-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.project-information {
+  display: flex;
+  flex-direction: column;
+  & p {
+    margin-block-start: 0;
+  }
 }

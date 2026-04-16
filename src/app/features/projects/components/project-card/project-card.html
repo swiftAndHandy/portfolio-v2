@@ -1,25 +1,28 @@
 @if (!isCollapsed()) {
-  <article>
-    <div class="window-chrome">
+  <article tabindex="0">
+    <header class="window-chrome">
       <app-traffic-light-bar
-        (close)="isCollapsed.set(true)"
-        (fullscreen)="overlay.open(); overlay.openFullscreen()"
+        (close)="collapse()"
+        (fullscreen)="overlay.open(); overlay.openFullscreen();"
         [isFullscreen]="false" />
-      <span class="window-title">{{ project().title }}</span>
-    </div>
-    <div class="window-content" (click)="overlay.open()" role="button" tabindex="0">
-      <img [src]="project().screenshots[0]?.url" [alt]="project().screenshots[0]?.alt" />
+      <h2 class="window-title">{{ project().title }}</h2>
       <ul class="tag-list">
         @for (tag of project().overviewTags; track tag) {
           <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
         }
       </ul>
-      <p>{{ project().description[langService.currentLang()] }}</p>
+    </header>
+    <div class="window-content" >
+      <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt" />
+      <div class="project-information">
+        <p>{{ project().description[langService.currentLang()] }}</p>
+        <button (click)="overlay.open()" transloco="project.learnMore"></button>
+      </div>
     </div>
   </article>
 } @else {
-  <button class="project-icon" (click)="isCollapsed.set(false)">
-    <img [src]="project().logo.url" [alt]="project().logo.alt" />
+  <button class="project-icon" (click)="isCollapsed.set(false)" #projectIcon>
+    <img [ngSrc]="project().logo.url" [alt]="project().logo.alt" width="48" height="48"/>
   </button>
 }
 
