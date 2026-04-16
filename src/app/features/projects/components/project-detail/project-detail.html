@@ -3,7 +3,7 @@
     <h2>{{project().title}}</h2>
     <ul class="techstack">
       @for (tag of project().detailTags; track tag) {
-        <li [class]="'tag --' + tag.toLowerCase()">{{tag}}</li>
+        <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
       }
     </ul>
   </header>

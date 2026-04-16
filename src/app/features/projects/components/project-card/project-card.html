@@ -11,7 +11,7 @@
       <img [src]="project().screenshots[0]?.url" [alt]="project().screenshots[0]?.alt" />
       <ul class="tag-list">
         @for (tag of project().overviewTags; track tag) {
-          <li [class]="'tag --' + tag.toLowerCase()">{{ tag }}</li>
+          <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
         }
       </ul>
       <p>{{ project().description[langService.currentLang()] }}</p>
