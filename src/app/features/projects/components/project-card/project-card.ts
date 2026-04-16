@@ -26,12 +26,20 @@ export class ProjectCard {
   protected langService = inject(LangService);
   private injector = inject(Injector);
 
+  protected projectPreview = viewChild<ElementRef>('projectPreview');
   protected projectIcon = viewChild<ElementRef>('projectIcon');
 
   collapse() {
     this.isCollapsed.set(true);
     afterNextRender(() => {
       this.projectIcon()?.nativeElement.focus();
+    }, { injector: this.injector });
+  }
+
+  launchPreview() {
+    this.isCollapsed.set(false);
+    afterNextRender(() => {
+      this.projectPreview()?.nativeElement.focus();
     }, { injector: this.injector });
   }
 

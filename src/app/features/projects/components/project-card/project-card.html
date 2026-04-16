@@ -1,5 +1,5 @@
 @if (!isCollapsed()) {
-  <article tabindex="0">
+  <article tabindex="0" #projectPreview>
     <header class="window-chrome">
       <app-traffic-light-bar
         (close)="collapse()"
@@ -21,7 +21,7 @@
     </div>
   </article>
 } @else {
-  <button class="project-icon" (click)="isCollapsed.set(false)" #projectIcon>
+  <button class="project-icon" (click)="launchPreview()" #projectIcon>
     <img [ngSrc]="project().logo.url" [alt]="project().logo.alt" width="48" height="48"/>
   </button>
 }
