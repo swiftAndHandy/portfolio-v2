@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LangMenu } from './lang-menu';
+import {getTranslocoModule} from '../../../../testing/transloco-testing/transloco-testing.module';
 
 describe('LangMenu', () => {
   let component: LangMenu;
@@ -8,7 +9,10 @@ describe('LangMenu', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LangMenu],
+      imports: [
+        getTranslocoModule(),
+        LangMenu
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LangMenu);

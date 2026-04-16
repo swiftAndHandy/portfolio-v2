@@ -31,6 +31,5 @@ export class Overlay {
   toggleFullscreen() {
     this.dialogRef()?.nativeElement.classList.toggle('is-fullscreen');
     this.isFullscreen.update(v => !v);
-    console.log(this.isFullscreen())
   }
 }
