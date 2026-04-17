@@ -9,6 +9,9 @@ import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-project-card',
+  host: {
+    '[class.collapsed]': 'isCollapsed()'
+  },
   imports: [
     TrafficLightBar,
     Overlay,

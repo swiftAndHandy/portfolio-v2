@@ -21,6 +21,11 @@
     "legalNotice": "Impressum",
     "privacyPolicy": "Datenschutz"
   },
+  "langMenu": {
+    "aria": "Verfügbare Sprachen",
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
   "footer": {
     "linkedIn": "LinkedIn öffnen (extern, neues Fenster)",
     "legalNav": "Rechtliche Informationen"
@@ -29,6 +34,9 @@
     "learnMore": "Mehr erfahren…"
   },
   "projects": {
+    "preview": {
+      "tagList": "Verwendete Sprachen"
+    },
     "title": "Projekte"
   },
   "home": {
@@ -38,10 +46,6 @@
       "cta": "Projekte ansehen"
     },
     "title": "Portfolio"
-  },
-  "langMenu": {
-    "de": "Deutsch",
-    "en": "Englisch"
   },
   "overlay": {
     "open": "{{ target }} anzeigen"

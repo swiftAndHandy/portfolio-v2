@@ -31,5 +31,68 @@ export const projects: Project[] =  [
     liveUrl: "",
     githubUrl: "",
     slug: "hydroproof",
-  }
+  },
+  {
+    id: "2",
+    title: "HydroProof",
+    overviewTags: ["Swift"],
+    detailTags: ["SwiftUI", "SwiftData", "HealthKit", "CloudKit"],
+    description: {
+      de: "Track deine Flaschen, nicht deine Schlücke.",
+      en: "Track your bottles, not just sips!"
+    },
+    longDescription: {
+      de: "Lorem Ipsum.",
+      en: "Lorem Ipsum.",
+    },
+    logo: {
+      url: "/assets/img/hydroproof_logo.webp",
+      alt: "HydroProof.app"
+    },
+    thumbnail: {
+      url: "/assets/img/hydroproof_thumbnail.webp",
+      alt: ""
+    },
+    screenshot:
+      {
+        url: "/assets/img/hydroproof_screenshot.webp",
+        alt: "HydroProof",
+      }
+    ,
+    liveUrl: "",
+    githubUrl: "",
+    slug: "hydroproof",
+  },
+  {
+    id: "3",
+    title: "HydroProof",
+    overviewTags: ["Swift"],
+    detailTags: ["SwiftUI", "SwiftData", "HealthKit", "CloudKit"],
+    description: {
+      de: "Track deine Flaschen, nicht deine Schlücke.",
+      en: "Track your bottles, not just sips!"
+    },
+    longDescription: {
+      de: "Lorem Ipsum.",
+      en: "Lorem Ipsum.",
+    },
+    logo: {
+      url: "/assets/img/hydroproof_logo.webp",
+      alt: "HydroProof.app"
+    },
+    thumbnail: {
+      url: "/assets/img/hydroproof_thumbnail.webp",
+      alt: ""
+    },
+    screenshot:
+      {
+        url: "/assets/img/hydroproof_screenshot.webp",
+        alt: "HydroProof",
+      }
+    ,
+    liveUrl: "",
+    githubUrl: "",
+    slug: "hydroproof",
+  },
+
 ]

@@ -21,6 +21,11 @@
     "legalNotice": "Legal Notice",
     "privacyPolicy": "Privacy Policy"
   },
+  "langMenu": {
+    "aria": "Missing value for 'langMenu.aria'",
+    "de": "German",
+    "en": "English"
+  },
   "footer": {
     "linkedIn": "Missing value for 'footer.linkedIn'",
     "legalNav": "Missing value for 'footer.legalNav'"
@@ -29,6 +34,9 @@
     "learnMore": "Missing value for 'project.learnMore'"
   },
   "projects": {
+    "preview": {
+      "tagList": "Missing value for 'projects.preview.tagList'"
+    },
     "title": "Projects"
   },
   "home": {
@@ -36,10 +44,6 @@
       "title": "Missing value for 'home.atf.title'"
     },
     "title": "Portfolio"
-  },
-  "langMenu": {
-    "de": "German",
-    "en": "English"
   },
   "overlay": {
     "open": "Missing value for 'overlay.open'"

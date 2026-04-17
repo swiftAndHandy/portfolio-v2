@@ -3,9 +3,14 @@
   container-name: project-card;
 }
 
+:host.collapsed {
+  place-self: center;
+}
+
 article {
-  border: 1px solid light-dark(black, white);
+  border: 1px solid light-dark(rgba(0,0,0,0.15), rgba(255,255,255,0.1));
   border-radius: 4px;
+  box-shadow: var(--macOS-window-shadow);
   padding: 12px;
   display: grid;
   grid-template-areas:
@@ -58,6 +63,27 @@ app-traffic-light-bar {
   grid-area: button;
   align-self: end;
   justify-self: end;
+}
+
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  img {
+    border-radius: 22%;
+    box-shadow: var(--macOS-window-shadow);
+    transition: transform 0.1s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 @container project-card (width < 480px) {

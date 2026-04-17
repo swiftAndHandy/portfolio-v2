@@ -3,7 +3,7 @@
     <icon-globe />
     <icon-chevron-down />
   </summary>
-  <ul>
+  <ul [aria-label]="t('langMenu.aria')" >
     @for (lang of languages; track lang) {
       <li>
         <button (click)="switchLang(lang)"
