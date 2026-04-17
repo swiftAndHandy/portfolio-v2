@@ -1,4 +1,4 @@
-import {Component, contentChild, effect, ElementRef, signal, viewChild} from '@angular/core';
+import {Component, contentChild, effect, ElementRef, input, signal, viewChild} from '@angular/core';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {TrafficLightBar} from '../traffic-light-bar/traffic-light-bar';
 
@@ -24,6 +24,7 @@ export class Overlay {
   private trafficLight = contentChild(TrafficLightBar);
 
   isFullscreen = signal(false);
+  ariaLabel = input('');
 
   open() { this.dialogRef()?.nativeElement.showModal(); }
   close() { this.dialogRef()?.nativeElement.close(); }

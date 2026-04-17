@@ -1,6 +1,6 @@
 <div *transloco="let t" class="lights">
   <button class="button red" (click)="close.emit()" [attr.aria-label]="t('action.close')"></button>
-  <div class="button yellow" (click)="close.emit()" role="presentation" tabindex="-1"></div>
+  <div class="button yellow" (click)="close.emit()" role="presentation" aria-hidden="true" ></div>
   <button class="button green" (click)="fullscreen.emit()"
           [attr.aria-label]="t(isFullscreen() ? 'action.exitFullscreen' : 'action.enterFullscreen')"></button>
 </div>

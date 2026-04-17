@@ -22,7 +22,7 @@
   </button>
 }
 
-<app-overlay #overlay>
+<app-overlay #overlay [ariaLabel]="project().title">
   <app-traffic-light-bar
     (close)="overlay.close()"
     (fullscreen)="overlay.toggleFullscreen()"
