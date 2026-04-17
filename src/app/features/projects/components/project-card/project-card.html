@@ -1,23 +1,19 @@
 @if (!isCollapsed()) {
   <article tabindex="0" #projectPreview>
-    <header class="window-chrome">
-      <app-traffic-light-bar
-        (close)="collapse()"
-        (fullscreen)="overlay.open(); overlay.openFullscreen();"
-        [isFullscreen]="false" />
-      <h2 class="window-title">{{ project().title }}</h2>
-      <ul class="tag-list">
-        @for (tag of project().overviewTags; track tag) {
-          <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
-        }
-      </ul>
-    </header>
-    <div class="window-content" >
-      <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt" />
-      <div class="project-information">
-        <p>{{ project().description[langService.currentLang()] }}</p>
-        <button (click)="overlay.open()" transloco="project.learnMore"></button>
-      </div>
+    <app-traffic-light-bar
+      (close)="collapse()"
+      (fullscreen)="overlay.open(); overlay.openFullscreen();"
+      [isFullscreen]="false" />
+    <h2 class="window-title">{{ project().title }}</h2>
+    <ul class="tag-list">
+      @for (tag of project().overviewTags; track tag) {
+        <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
+      }
+    </ul>
+    <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt" />
+    <div class="project-information">
+      <p>{{ project().description[langService.currentLang()] }}</p>
+      <button (click)="overlay.open()" transloco="project.learnMore"></button>
     </div>
   </article>
 } @else {
