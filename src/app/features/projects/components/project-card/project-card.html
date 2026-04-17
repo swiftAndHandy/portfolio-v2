@@ -1,5 +1,5 @@
 @if (!isCollapsed()) {
-  <article *transloco="let t" [attr.aria-label]="project().title" tabindex="0" #projectPreview>
+  <article *transloco="let t" [attr.aria-label]="project().title" tabindex="-1" #projectPreview>
     <app-traffic-light-bar
       (close)="collapse()"
       (fullscreen)="overlay.open(); overlay.openFullscreen();"
@@ -11,18 +11,17 @@
       }
     </ul>
     <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt" />
-    <div class="project-information">
-      <p aria-hidden="true" [id]="'description-' + project().id">{{ project().description[langService.currentLang()] }}</p>
-      <button (click)="overlay.open()" transloco="project.learnMore"></button>
-    </div>
+    <p aria-hidden="true" [id]="'description-' + project().id">{{ project().description[langService.currentLang()] }}</p>
+    <button class="learn-more" (click)="overlay.open()" transloco="project.learnMore"></button>
   </article>
 } @else {
-  <button class="project-icon" (click)="launchPreview()" #projectIcon>
-    <img [ngSrc]="project().logo.url" [alt]="project().logo.alt" width="48" height="48"/>
+  <button *transloco="let t" class="project-icon" (click)="launchPreview()" #projectIcon>
+    <img [ngSrc]="project().logo.url" [alt]="t('project.openPreview') + project().logo.alt" width="48" height="48"/>
   </button>
 }
 
 <app-overlay #overlay [ariaLabel]="project().title">
+
   <app-traffic-light-bar
     (close)="overlay.close()"
     (fullscreen)="overlay.toggleFullscreen()"

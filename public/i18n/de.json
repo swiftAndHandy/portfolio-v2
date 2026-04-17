@@ -31,7 +31,12 @@
     "legalNav": "Rechtliche Informationen"
   },
   "project": {
-    "learnMore": "Mehr erfahren…"
+    "detail": {
+      "tagList": "Verwendete Technologien",
+      "article": "Informationen über {{ project }}"
+    },
+    "learnMore": "Mehr erfahren…",
+    "openPreview": "Öffne Vorschau für: "
   },
   "projects": {
     "preview": {

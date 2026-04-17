@@ -63,6 +63,24 @@ app-traffic-light-bar {
   grid-area: button;
   align-self: end;
   justify-self: end;
+
+  background: light-dark(#0071E3, #0A84FF);
+  color: white;
+  border: none;
+  border-radius: 980px;
+  padding: 10px 20px;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+
+  &:hover {
+    background: light-dark(#0077ED, #0070F0);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
 }
 
 .project-icon {
@@ -109,6 +127,6 @@ app-traffic-light-bar {
   }
 
   .learn-more {
-    justify-self: stretch;
+    justify-self: end;
   }
 }

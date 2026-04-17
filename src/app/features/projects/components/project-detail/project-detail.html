@@ -1,7 +1,7 @@
-<article>
+<article *transloco="let t" [attr.aria-label]="t('project.detail.article', { project: project().title })">
   <header>
     <h2>{{project().title}}</h2>
-    <ul class="techstack">
+    <ul class="techstack" [attr.aria-label]="t('project.detail.tagList')">
       @for (tag of project().detailTags; track tag) {
         <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
       }

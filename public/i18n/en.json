@@ -28,10 +28,15 @@
   },
   "footer": {
     "linkedIn": "Missing value for 'footer.linkedIn'",
-    "legalNav": "Missing value for 'footer.legalNav'"
+    "legalNav": "Legal Information"
   },
   "project": {
-    "learnMore": "Missing value for 'project.learnMore'"
+    "detail": {
+      "tagList": "Missing value for 'project.detail.tagList'",
+      "article": "Detailed Information about {{ project }}"
+    },
+    "learnMore": "Missing value for 'project.learnMore'",
+    "openPreview": "Missing value for 'project.openPreview'"
   },
   "projects": {
     "preview": {
