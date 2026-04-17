@@ -4,6 +4,8 @@ import {Home} from './features/home/home';
 import {PrivacyPolicy} from './features/legal/privacy-policy';
 import {LegalNotice} from './features/legal/legal-notice';
 import {Projects} from './features/projects/projects';
+import {Techstack} from './features/techstack/techstack';
+import {ContactForm} from './features/contact-form/contact-form';
 export const routes: Routes = [
   {
     path: ':lang',
@@ -14,8 +16,16 @@ export const routes: Routes = [
         component: Home
       },
       {
+        path: 'contact',
+        component: ContactForm
+      },
+      {
         path: 'projects',
         component: Projects
+      },
+      {
+        path: 'tech-stack',
+        component: Techstack
       },
       {
         path: 'legal',

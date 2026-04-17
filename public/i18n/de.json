@@ -12,7 +12,7 @@
     "openMenu": "Menü öffnen",
     "about": "Vorstellung",
     "projects": "Projekte",
-    "stack": "Techstack",
+    "techstack": "Tech-Stack",
     "contact": "Kontakt",
     "mainNav": "Hauptnavigation",
     "lightMode": "Helles Erscheiungsbild aktivieren",
@@ -29,6 +29,9 @@
   "footer": {
     "linkedIn": "LinkedIn öffnen (extern, neues Fenster)",
     "legalNav": "Rechtliche Informationen"
+  },
+  "techstack": {
+    "title": "Tech-Stack"
   },
   "project": {
     "detail": {
@@ -51,6 +54,9 @@
       "cta": "Projekte ansehen"
     },
     "title": "Portfolio"
+  },
+  "contactForm": {
+    "title": "Kontaktformular"
   },
   "overlay": {
     "open": "{{ target }} anzeigen"

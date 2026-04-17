@@ -51,8 +51,10 @@ export class SeoService {
   private getRouteKey(): string {
     const path = this.router.url;
 
-    if (path.includes('projects')) return 'projects';
     if (path.includes('about')) return 'about';
+    if (path.includes('contact')) return 'contactForm';
+    if (path.includes('projects')) return 'projects';
+    if (path.includes('techstack')) return 'techstack';
 
     return 'home';
   }

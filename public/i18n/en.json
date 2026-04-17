@@ -10,10 +10,10 @@
   "nav": {
     "closeMenu": "Close Menu",
     "openMenu": "Open Menu",
-    "about": "Missing value for 'nav.about'",
-    "projects": "Missing value for 'nav.projects'",
-    "stack": "Missing value for 'nav.stack'",
-    "contact": "Missing value for 'nav.contact'",
+    "about": "About",
+    "projects": "Projects",
+    "techstack": "Tech Stack",
+    "contact": "Contact",
     "mainNav": "Main Navigation",
     "lightMode": "Display in light mode",
     "darkMode": "Display in dark mode",
@@ -29,6 +29,9 @@
   "footer": {
     "linkedIn": "Missing value for 'footer.linkedIn'",
     "legalNav": "Legal Information"
+  },
+  "techstack": {
+    "title": "Tech Stack"
   },
   "project": {
     "detail": {
@@ -49,6 +52,9 @@
       "title": "Missing value for 'home.atf.title'"
     },
     "title": "Portfolio"
+  },
+  "contactForm": {
+    "title": "Contact me"
   },
   "overlay": {
     "open": "Missing value for 'overlay.open'"
