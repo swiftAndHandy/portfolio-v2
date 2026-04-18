@@ -1,4 +1,7 @@
 .lights {
+  position: relative;
+  z-index: 10;
+  padding: 3px;
   display: flex;
   gap: 8px;
   & > .button {

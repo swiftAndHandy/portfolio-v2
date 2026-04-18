@@ -102,6 +102,37 @@ export class Overlay {
     });
   }
 
+  startDrag(event: PointerEvent) {
+    event.preventDefault();
+    const el = this.dialogRef()!.nativeElement;
+    const startX = event.clientX;
+    const startY = event.clientY;
+    const startL = parseFloat(el.style.left);
+    const startT = parseFloat(el.style.top);
+
+    el.style.transition = 'none';
+
+    const onMove = (e: PointerEvent) => {
+      const minVisible = 0.1;
+      const minLeft = -(el.offsetWidth * (1 - minVisible));
+      const maxLeft = window.innerWidth - el.offsetWidth * minVisible;
+      const minTop = 0;
+      const maxTop = window.innerHeight - el.offsetHeight * minVisible;
+
+      el.style.left = `${Math.max(minLeft, Math.min(maxLeft, startL + (e.clientX - startX)))}px`;
+      el.style.top = `${Math.max(minTop, Math.min(maxTop, startT + (e.clientY - startY)))}px`;
+    };
+
+    const onUp = () => {
+      el.style.transition = '';
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onUp);
+    };
+
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+  }
+
   startResize(event: PointerEvent, direction: string) {
     event.preventDefault();
     const el = this.dialogRef()!.nativeElement;
@@ -119,15 +150,23 @@ export class Overlay {
       const dx = e.clientX - startX;
       const dy = e.clientY - startY;
 
-      if (direction.includes('e')) el.style.width = `${startW + dx}px`;
-      if (direction.includes('s')) el.style.height = `${startH + dy}px`;
+      if (direction.includes('e')) {
+        const maxW = window.innerWidth - parseFloat(el.style.left);
+        el.style.width = `${Math.min(maxW, Math.max(200, startW + dx))}px`;
+      }
+      if (direction.includes('s')) {
+        const maxH = window.innerHeight - parseFloat(el.style.top);
+        el.style.height = `${Math.min(maxH, Math.max(200, startH + dy))}px`;
+      }
       if (direction.includes('w')) {
-        el.style.width = `${startW - dx}px`;
-        el.style.left = `${startL + dx}px`;
+        const newW = Math.min(startL + startW, Math.max(200, startW - dx));
+        el.style.width = `${newW}px`;
+        el.style.left = `${Math.max(0, startL + (startW - newW))}px`;
       }
       if (direction.includes('n')) {
-        el.style.height = `${startH - dy}px`;
-        el.style.top = `${startT + dy}px`;
+        const newH = Math.min(startT + startH, Math.max(200, startH - dy));
+        el.style.height = `${newH}px`;
+        el.style.top = `${Math.max(0, startT + (startH - newH))}px`;
       }
     };
 

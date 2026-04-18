@@ -1,5 +1,6 @@
 <dialog #dialog [aria-label]="ariaLabel()">
   <ng-content />
+  <div class="drag-handle" (pointerdown)="startDrag($event)"></div>
   <div class="resize-handle resize-n" (pointerdown)="startResize($event, 'n')"></div>
   <div class="resize-handle resize-s" (pointerdown)="startResize($event, 's')"></div>
   <div class="resize-handle resize-e" (pointerdown)="startResize($event, 'e')"></div>

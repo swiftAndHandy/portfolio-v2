@@ -20,9 +20,22 @@ dialog.is-fullscreen {
   max-height: calc(100dvh - var(--fullscreen-spacing) * 2);
   max-width: calc(100vw - var(--fullscreen-spacing) * 2);
   width: calc(100vw - var(--fullscreen-spacing) * 2);
+  top: var(--fullscreen-spacing);
+  left: var(--fullscreen-spacing);
+  translate: 0;
+}
+
+.drag-handle {
+  position: absolute;
   top: 0;
   left: 0;
-  translate: 0;
+  right: 0;
+  height: 14px;
+  cursor: grab;
+  z-index: 9;
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .resize-handle {
