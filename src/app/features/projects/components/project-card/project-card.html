@@ -3,7 +3,8 @@
     <app-traffic-light-bar
       (close)="collapse()"
       (fullscreen)="overlay.open(); overlay.openFullscreen();"
-      [isFullscreen]="false" />
+      [isFullscreen]="false"
+      [target]="project().title" />
     <h2 class="window-title" [aria-describedby]="'description-' + project().id">{{ project().title }}</h2>
     <ul class="tag-list" [attr.aria-label]="t('projects.preview.tagList')">
       @for (tag of project().overviewTags; track tag) {
@@ -25,6 +26,7 @@
   <app-traffic-light-bar
     (close)="overlay.close()"
     (fullscreen)="overlay.toggleFullscreen()"
-    [isFullscreen]="false" />
+    [isFullscreen]="overlay.isFullscreen()"
+    [target]="project().title" />
   <app-project-detail [project]="project()"/>
 </app-overlay>

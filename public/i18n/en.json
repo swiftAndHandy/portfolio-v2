@@ -5,7 +5,8 @@
   "action": {
     "close": "Close",
     "exitFullscreen": "Close fullscreen for {{ target }}",
-    "enterFullscreen": "Open {{ target }} in fullscreen"
+    "enterFullscreen": "Open {{ target }} in fullscreen",
+    "targetMissing": "Unknown"
   },
   "nav": {
     "closeMenu": "Close Menu",
