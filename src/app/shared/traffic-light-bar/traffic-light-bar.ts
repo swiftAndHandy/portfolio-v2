@@ -12,5 +12,5 @@ import {TranslocoDirective} from '@jsverse/transloco';
 export class TrafficLightBar {
   close = output();
   fullscreen = output();
-  isFullscreen = input(false);
+  isFullscreen = input(true);
 }
