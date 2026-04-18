@@ -5,12 +5,9 @@ import {
   ElementRef,
   inject,
   input,
-  PLATFORM_ID,
   signal,
   viewChild
 } from '@angular/core';
-import {TranslocoDirective} from '@jsverse/transloco';
-import {TrafficLightBar} from '../traffic-light-bar/traffic-light-bar';
 
 /**
  * Generic overlay component based on the native <dialog> element.
@@ -32,9 +29,7 @@ import {TrafficLightBar} from '../traffic-light-bar/traffic-light-bar';
 export class Overlay {
 
   private doc = inject(DOCUMENT);
-  private platformId = inject(PLATFORM_ID);
   private dialogRef = viewChild<ElementRef<HTMLDialogElement>>('dialog');
-  private trafficLight = contentChild(TrafficLightBar);
 
   isFullscreen = signal(false);
   ariaLabel = input('');
