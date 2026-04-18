@@ -1,4 +1,14 @@
-import {Component, contentChild, effect, ElementRef, input, signal, viewChild} from '@angular/core';
+import {
+  Component,
+  contentChild,
+  DOCUMENT,
+  ElementRef,
+  inject,
+  input,
+  PLATFORM_ID,
+  signal,
+  viewChild
+} from '@angular/core';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {TrafficLightBar} from '../traffic-light-bar/traffic-light-bar';
 
@@ -20,6 +30,9 @@ import {TrafficLightBar} from '../traffic-light-bar/traffic-light-bar';
   styleUrl: './overlay.css',
 })
 export class Overlay {
+
+  private doc = inject(DOCUMENT);
+  private platformId = inject(PLATFORM_ID);
   private dialogRef = viewChild<ElementRef<HTMLDialogElement>>('dialog');
   private trafficLight = contentChild(TrafficLightBar);
 
@@ -38,8 +51,8 @@ export class Overlay {
       requestAnimationFrame(() => {
         const w = el.offsetWidth;
         const h = el.offsetHeight;
-        el.style.left = `${(window.innerWidth - w) / 2}px`;
-        el.style.top = `${(window.innerHeight - h) / 2}px`;
+        el.style.left = `${((this.doc.defaultView?.innerWidth ?? 0) - w) / 2}px`;
+        el.style.top = `${((this.doc.defaultView?.innerHeight ?? 0) - h) / 2}px`;
         requestAnimationFrame(() => {
           el.style.transition = '';
         });
@@ -87,8 +100,8 @@ export class Overlay {
       const h = parseFloat(getComputedStyle(el).height);
 
       this.savedPosition = {
-        left: `${(window.innerWidth - w) / 2}px`,
-        top: `${(window.innerHeight - h) / 2}px`,
+        left: `${((this.doc.defaultView?.innerWidth ?? 0) - w) / 2}px`,
+        top: `${((this.doc.defaultView?.innerHeight ?? 0) - h) / 2}px`,
         width: '',
         height: '',
       };
@@ -115,9 +128,9 @@ export class Overlay {
     const onMove = (e: PointerEvent) => {
       const minVisible = 0.1;
       const minLeft = -(el.offsetWidth * (1 - minVisible));
-      const maxLeft = window.innerWidth - el.offsetWidth * minVisible;
+      const maxLeft = (this.doc.defaultView?.innerWidth ?? 0) - el.offsetWidth * minVisible;
       const minTop = 0;
-      const maxTop = window.innerHeight - el.offsetHeight * minVisible;
+      const maxTop = (this.doc.defaultView?.innerHeight ?? 0) - el.offsetHeight * minVisible;
 
       el.style.left = `${Math.max(minLeft, Math.min(maxLeft, startL + (e.clientX - startX)))}px`;
       el.style.top = `${Math.max(minTop, Math.min(maxTop, startT + (e.clientY - startY)))}px`;
@@ -125,12 +138,12 @@ export class Overlay {
 
     const onUp = () => {
       el.style.transition = '';
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', onUp);
+      this.doc.defaultView?.removeEventListener('pointermove', onMove);
+      this.doc.defaultView?.removeEventListener('pointerup', onUp);
     };
 
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', onUp);
+    this.doc.defaultView?.addEventListener('pointermove', onMove);
+    this.doc.defaultView?.addEventListener('pointerup', onUp);
   }
 
   startResize(event: PointerEvent, direction: string) {
@@ -151,11 +164,11 @@ export class Overlay {
       const dy = e.clientY - startY;
 
       if (direction.includes('e')) {
-        const maxW = window.innerWidth - parseFloat(el.style.left);
+        const maxW = (this.doc.defaultView?.innerWidth ?? 0) - parseFloat(el.style.left);
         el.style.width = `${Math.min(maxW, Math.max(200, startW + dx))}px`;
       }
       if (direction.includes('s')) {
-        const maxH = window.innerHeight - parseFloat(el.style.top);
+        const maxH = (this.doc.defaultView?.innerHeight ?? 0) - parseFloat(el.style.top);
         el.style.height = `${Math.min(maxH, Math.max(200, startH + dy))}px`;
       }
       if (direction.includes('w')) {
@@ -172,11 +185,11 @@ export class Overlay {
 
     const onUp = () => {
       el.style.transition = '';
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', onUp);
+      this.doc.defaultView?.removeEventListener('pointermove', onMove);
+      this.doc.defaultView?.removeEventListener('pointerup', onUp);
     };
 
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', onUp);
+    this.doc.defaultView?.addEventListener('pointermove', onMove);
+    this.doc.defaultView?.addEventListener('pointerup', onUp);
   }
 }
