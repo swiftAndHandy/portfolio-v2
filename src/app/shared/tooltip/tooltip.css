@@ -1,0 +1,27 @@
+:host {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 4px 8px;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  visibility: hidden;
+  translate: 8px 8px;
+}
+
+:host:hover .tooltip,
+:host:focus-within .tooltip {
+  visibility: visible;
+  border: 1px solid light-dark(rgba(0,0,0,0.15), rgba(255,255,255,0.1));
+  box-shadow: var(--window-shadow);
+  background-color: canvas;
+}
+
+:host:hover .tooltip {
+  z-index: 2;
+}

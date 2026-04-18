@@ -31,9 +31,6 @@
     "linkedIn": "Missing value for 'footer.linkedIn'",
     "legalNav": "Legal Information"
   },
-  "techstack": {
-    "title": "Tech Stack"
-  },
   "project": {
     "detail": {
       "tagList": "Missing value for 'project.detail.tagList'",
@@ -56,6 +53,9 @@
   },
   "contactForm": {
     "title": "Contact me"
+  },
+  "techstack": {
+    "title": "Tech Stack"
   },
   "overlay": {
     "open": "Missing value for 'overlay.open'"

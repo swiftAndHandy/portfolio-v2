@@ -4,12 +4,13 @@
   --shadow-inset: rgba(0, 0, 0, 0.15);
   --max-desktop-width: 1280px;
   --max-mobile-width: 768px;
-  --macOS-window-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  --window-border: 1px solid light-dark(rgba(0,0,0,0.15), rgba(255,255,255,0.1));
+  --window-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 :root.dark {
   color-scheme: dark;
-  --macOS-window-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  --window-shadow: 0 2px 8px rgba(0,0,0,0.5);
   --shadow-inset: rgba(0, 0, 0, 0.3);
 }
 

@@ -1,3 +1,20 @@
-<div *transloco="let t">
-  {{t('techstack.title')}}
-</div>
+<ng-container *transloco="let t">
+  @for (category of objectKeys(groupedSkills); track category) {
+    <section>
+      <h2>{{t('techstack.category.' + category) }}</h2>
+      <ul>
+        @for (skill of groupedSkills[category]; track skill.id) {
+          <li>
+            <app-tooltip [text]="skill.name">
+              @if (skill.logoUrl) {
+                <img tabindex="0" [ngSrc]="skill.logoUrl" width="48" height="48" [alt]="skill.name" class="skill">
+              } @else {
+                <span class="skill-placeholder">{{ skill.name }}</span>
+              }
+            </app-tooltip>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+</ng-container>

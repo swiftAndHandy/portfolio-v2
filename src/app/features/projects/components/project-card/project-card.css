@@ -8,9 +8,9 @@
 }
 
 article {
-  border: 1px solid light-dark(rgba(0,0,0,0.15), rgba(255,255,255,0.1));
+  border: var(--window-border);
   border-radius: 4px;
-  box-shadow: var(--macOS-window-shadow);
+  box-shadow: var(--window-shadow);
   padding: 12px;
   display: grid;
   grid-template-areas:
@@ -63,7 +63,7 @@ app-traffic-light-bar {
   grid-area: button;
   align-self: end;
   justify-self: end;
-
+  outline-color: red;
   background: light-dark(#0071E3, #0A84FF);
   color: white;
   border: none;
@@ -95,7 +95,7 @@ app-traffic-light-bar {
 
   img {
     border-radius: 22%;
-    box-shadow: var(--macOS-window-shadow);
+    box-shadow: var(--window-shadow);
     transition: transform 0.1s ease;
 
     &:hover {

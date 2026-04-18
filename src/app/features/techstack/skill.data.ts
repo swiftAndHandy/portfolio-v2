@@ -26,7 +26,7 @@ export const skills: Skill[] = [
     id: "4",
     name: "Firebase",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-    platform: "personal",
+    platform: "web",
     category: "backend"
   },
   {
@@ -34,7 +34,7 @@ export const skills: Skill[] = [
     name: "Git",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     platform: "personal",
-    category: "both"
+    category: "other"
   },
   {
     id: "6",
@@ -69,11 +69,18 @@ export const skills: Skill[] = [
     name: "SwiftUI",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
     platform: "stand-alone",
-    category: "both"
+    category: "frontend"
   },
   {
     id: "11",
-    name: "DRF",
+    name: "SwiftData/CloudKit",
+    logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
+    platform: "stand-alone",
+    category: "backend"
+  },
+  {
+    id: "12",
+    name: "Django DRF",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
     platform: "web",
     category: "backend"

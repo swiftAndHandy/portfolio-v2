@@ -1,0 +1,15 @@
+ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  border: var(--window-border);
+  border-radius: 4px;
+  align-items: center;
+  padding: 12px;
+  background: canvas;
+}
+
+li {
+  display: flex;
+}
