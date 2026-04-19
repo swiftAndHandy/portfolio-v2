@@ -7,4 +7,7 @@
       }
     </ul>
   </header>
+  @if (project().appstoreUrl) {
+    <a class="primary-button" target="_blank" [href]="project().appstoreUrl" rel="noopener norefferer">{{ t('project.appstoreLink') }}</a>
+  }
 </article>

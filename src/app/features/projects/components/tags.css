@@ -9,6 +9,7 @@
   font-weight: 500;
   letter-spacing: 0.03em;
   border: 1px solid color-mix(in srgb, var(--tag-color) 90%, transparent);
+  place-content: center;
 
   &.--swift        { --tag-color: linear-gradient(135deg, #C0392B 80%, #E74C3C); --tag-text-color: white; }
   &.--swiftui      { --tag-color: linear-gradient(135deg, #0A6EBD 80%, #5DADE2); --tag-text-color: white; }

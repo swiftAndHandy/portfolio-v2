@@ -59,30 +59,6 @@ app-traffic-light-bar {
   margin: 0;
 }
 
-.learn-more {
-  grid-area: button;
-  align-self: end;
-  justify-self: end;
-  outline-color: red;
-  background: light-dark(#0071E3, #0A84FF);
-  color: white;
-  border: none;
-  border-radius: 980px;
-  padding: 10px 20px;
-  font-size: 0.9375rem;
-  font-weight: 400;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
-
-  &:hover {
-    background: light-dark(#0077ED, #0070F0);
-  }
-
-  &:active {
-    transform: scale(0.97);
-  }
-}
-
 .project-icon {
   display: flex;
   align-items: center;
@@ -102,6 +78,12 @@ app-traffic-light-bar {
       transform: scale(1.05);
     }
   }
+}
+
+.learn-more {
+  grid-area: button;
+  align-self: end;
+  justify-self: end;
 }
 
 @container project-card (width < 480px) {

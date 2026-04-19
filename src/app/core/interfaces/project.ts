@@ -9,17 +9,18 @@ export interface Project {
   longDescription: Record<Language, string>;
   logo: {
     url: string,
-    alt: string
+    alt: Record<Language, string>;
   };
   thumbnail: {
     url: string
-    alt: string
+    alt: Record<Language, string>;
   };
   screenshot: {
     url: string
-    alt: string
+    alt: Record<Language, string>;
   };
   liveUrl?: string;
+  appstoreUrl?: string;
   githubUrl?: string;
   slug?: string;
 }

@@ -1,13 +1,31 @@
+section {
+  border: var(--window-border);
+  border-radius: 4px;
+  align-items: center;
+  padding: 12px 12px 0 12px;
+  background: canvas;
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  & header {
+    padding: 8px 12px;
+    border-bottom: var(--window-border);
+    background: light-dark(var(--window-border));
+
+    & h2 {
+      margin: 0;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+  }
+}
+
 ul {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 16px;
   list-style: none;
-  border: var(--window-border);
-  border-radius: 4px;
-  align-items: center;
-  padding: 12px;
-  background: canvas;
 }
 
 li {

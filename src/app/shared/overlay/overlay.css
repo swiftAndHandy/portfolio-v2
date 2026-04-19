@@ -5,7 +5,7 @@ dialog {
   max-height: unset;
   width: 50vw;
   height: 50dvh;
-  border: 1px solid light-dark(rgba(0,0,0,0.15), rgba(255,255,255,0.1));
+  border: var(--window-border);
   border-radius: 12px;
   box-sizing: border-box;
   box-shadow: var(--window-shadow);

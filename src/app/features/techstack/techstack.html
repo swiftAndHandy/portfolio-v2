@@ -1,11 +1,12 @@
 <ng-container *transloco="let t">
+  <h1 transloco="techstack.title"></h1>
   @for (category of objectKeys(groupedSkills); track category) {
     <section>
-      <h2>{{t('techstack.category.' + category) }}</h2>
-      <ul>
+      <header><h2>{{t('techstack.category.' + category) }}</h2></header>
+      <ul [aria-label]="t('techstack.list.' + category)">
         @for (skill of groupedSkills[category]; track skill.id) {
           <li>
-            <app-tooltip [text]="skill.name">
+            <app-tooltip [ariaHidden]="true" [text]="skill.name">
               @if (skill.logoUrl) {
                 <img tabindex="0" [ngSrc]="skill.logoUrl" width="48" height="48" [alt]="skill.name" class="skill">
               } @else {

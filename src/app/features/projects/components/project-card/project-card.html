@@ -13,7 +13,7 @@
     </ul>
     <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt" />
     <p aria-hidden="true" [id]="'description-' + project().id">{{ project().description[langService.currentLang()] }}</p>
-    <button class="learn-more" (click)="overlay.open()" transloco="project.learnMore"></button>
+    <button class="primary-button learn-more" (click)="overlay.open()" transloco="project.learnMore"></button>
   </article>
 } @else {
   <button *transloco="let t" class="project-icon" (click)="launchPreview()" #projectIcon>

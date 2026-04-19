@@ -31,11 +31,25 @@
     "linkedIn": "Missing value for 'footer.linkedIn'",
     "legalNav": "Legal Information"
   },
+  "techstack": {
+    "title": "Tech Stack",
+    "category": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "other": "Sonstiges"
+    },
+    "list": {
+      "frontend": "Frontend skills",
+      "backend": "Backend skills",
+      "other": "Other skills"
+    }
+  },
   "project": {
     "detail": {
       "tagList": "Missing value for 'project.detail.tagList'",
       "article": "Detailed Information about {{ project }}"
     },
+    "appstoreLink": "Missing value for 'project.appstoreLink'",
     "learnMore": "Missing value for 'project.learnMore'",
     "openPreview": "Missing value for 'project.openPreview'"
   },
@@ -53,9 +67,6 @@
   },
   "contactForm": {
     "title": "Contact me"
-  },
-  "techstack": {
-    "title": "Tech Stack"
   },
   "overlay": {
     "open": "Missing value for 'overlay.open'"

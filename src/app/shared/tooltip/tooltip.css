@@ -17,7 +17,7 @@
 :host:hover .tooltip,
 :host:focus-within .tooltip {
   visibility: visible;
-  border: 1px solid light-dark(rgba(0,0,0,0.15), rgba(255,255,255,0.1));
+  border: var(--window-border);
   box-shadow: var(--window-shadow);
   background-color: canvas;
 }

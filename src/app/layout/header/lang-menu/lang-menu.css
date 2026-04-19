@@ -19,6 +19,7 @@ summary {
   position: relative;
   & ul {
     position: absolute;
+    z-index: 99;
     right: 0;
     list-style: none;
     padding: 4px;
@@ -26,7 +27,7 @@ summary {
     background: light-dark(rgba(255,255,255,0.85), rgba(40,40,40,0.85));
     backdrop-filter: blur(20px);
     --webkit-backdrop-filter: blur(20px);
-    border: 1px solid light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.1));
+    border: var(--window-border);
     border-radius: 8px;
     box-shadow: var(--window-shadow);
     min-width: 80px;

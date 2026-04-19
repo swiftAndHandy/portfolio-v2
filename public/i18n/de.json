@@ -31,11 +31,25 @@
     "linkedIn": "LinkedIn öffnen (extern, neues Fenster)",
     "legalNav": "Rechtliche Informationen"
   },
+  "techstack": {
+    "title": "Tech-Stack",
+    "category": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "other": "Sonstiges"
+    },
+    "list": {
+      "frontend": "Frontend Skills",
+      "backend": "Backend Skills",
+      "other": "Sonstige Kenntnisse"
+    }
+  },
   "project": {
     "detail": {
       "tagList": "Verwendete Technologien",
       "article": "Informationen über {{ project }}"
     },
+    "appstoreLink": "App Store öffnen",
     "learnMore": "Mehr erfahren…",
     "openPreview": "Öffne Vorschau für: "
   },
@@ -55,14 +69,6 @@
   },
   "contactForm": {
     "title": "Kontaktformular"
-  },
-  "techstack": {
-    "title": "Tech-Stack",
-    "category": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "other": "Sonstiges"
-    }
   },
   "overlay": {
     "open": "{{ target }} anzeigen"

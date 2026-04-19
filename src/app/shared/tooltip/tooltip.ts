@@ -8,6 +8,7 @@ import {Component, HostListener, input, signal} from '@angular/core';
 })
 export class Tooltip {
   text = input.required<string>();
+  ariaHidden = input(false);
   mouseX = signal(0);
   mouseY = signal(0);
 
