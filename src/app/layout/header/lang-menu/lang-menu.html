@@ -7,7 +7,7 @@
     @for (lang of languages; track lang) {
       <li>
         <button (click)="switchLang(lang)"
-                [attr.aria-current]="lang === langService.currentLang() ? 'true' : null"
+                [attr.aria-pressed]="lang === langService.currentLang() ? 'true' : null"
                 [attr.aria-label]="t('langMenu.' + lang)">
           {{ lang.toUpperCase() }}
         </button>

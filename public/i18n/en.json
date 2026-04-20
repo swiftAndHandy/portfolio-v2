@@ -56,6 +56,12 @@
     "openPreview": "Missing value for 'project.openPreview'"
   },
   "projects": {
+    "filter": {
+      "list": "Search filter",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "both": "All"
+    },
     "preview": {
       "tagList": "Missing value for 'projects.preview.tagList'"
     },

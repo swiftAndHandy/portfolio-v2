@@ -1,5 +1,15 @@
-<div class="projects-grid">
-  @for (project of projects; track project.id) {
+<section *transloco="let t">
+  <ul class="filter-bar" [aria-label]="t('projects.filter.list')">
+    @for (category of filterOptions; track category) {
+      <li>
+        <button (click)="activeFilter.set(category)"
+        [aria-pressed]="activeFilter() === category">{{ t('projects.filter.' + category) }}</button>
+      </li>
+    }
+  </ul>
+</section>
+<section class="projects-grid">
+  @for (project of filteredProjects(); track project.id) {
     <app-project-card [project]="project"/>
   }
-</div>
+</section>
