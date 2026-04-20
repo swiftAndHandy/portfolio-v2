@@ -72,7 +72,23 @@
     "title": "Datenschutzerklärung"
   },
   "contactForm": {
-    "title": "Kontaktformular"
+    "title": "Kontakt",
+    "name": "Name",
+    "namePlaceholder": "Dein Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "deine@email.de",
+    "message": "Nachricht",
+    "messagePlaceholder": "Wie kann ich dir helfen?",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "retry": "Erneut versuchen",
+    "success": "Deine Nachricht wurde gesendet – ich melde mich so bald wie möglich!",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "nameRequired": "Bitte gib deinen Namen ein.",
+    "emailRequired": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "messageRequired": "Bitte gib eine Nachricht ein (min. 10 Zeichen).",
+    "privacyConsent": "Ich habe die <a href='{{ link }}'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "privacyRequired": "Bitte stimme der Datenschutzerklärung zu."
   },
   "about": {
     "photoAlt": "Foto von Andre Veltens",

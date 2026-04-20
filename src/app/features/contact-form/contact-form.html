@@ -1,1 +1,89 @@
-<p *transloco="let t">{{ t('contactForm.title') }} works!</p>
+<section *transloco="let t">
+  <h1>{{ t('contactForm.title') }}</h1>
+
+  @if (status() === 'success') {
+    <div class="feedback success" role="status">
+      <p>{{ t('contactForm.success') }}</p>
+    </div>
+  } @else {
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+
+      <div class="field">
+        <label for="contact-name">{{ t('contactForm.name') }}</label>
+        <input id="contact-name"
+               type="text"
+               formControlName="name"
+               [placeholder]="t('contactForm.namePlaceholder')"
+               autocomplete="name"
+               [attr.aria-describedby]="name.invalid && name.touched ? 'contact-name-error' : null" />
+        @if (name.invalid && name.touched) {
+          <span id="contact-name-error" class="error" role="alert">
+            {{ t('contactForm.nameRequired') }}
+          </span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="contact-email">{{ t('contactForm.email') }}</label>
+        <input id="contact-email"
+               type="email"
+               formControlName="email"
+               [placeholder]="t('contactForm.emailPlaceholder')"
+               autocomplete="email"
+               [attr.aria-describedby]="email.invalid && email.touched ? 'contact-email-error' : null" />
+        @if (email.invalid && email.touched) {
+          <span id="contact-email-error" class="error" role="alert">
+            {{ t('contactForm.emailRequired') }}
+          </span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="contact-msg">{{ t('contactForm.message') }}</label>
+        <textarea id="contact-msg"
+                  formControlName="msg"
+                  rows="6"
+                  [placeholder]="t('contactForm.messagePlaceholder')"
+                  [attr.aria-describedby]="msg.invalid && msg.touched ? 'contact-msg-error' : null"></textarea>
+        @if (msg.invalid && msg.touched) {
+          <span id="contact-msg-error" class="error" role="alert">
+            {{ t('contactForm.messageRequired') }}
+          </span>
+        }
+      </div>
+
+      <div class="field field--checkbox">
+        <label class="checkbox-label">
+          <input type="checkbox"
+                 formControlName="privacy"
+                 id="contact-privacy"
+                 [attr.aria-describedby]="privacy.invalid && privacy.touched ? 'contact-privacy-error' : null" />
+          <span [innerHTML]="t('contactForm.privacyConsent', { link: langService.routerLinkToPath('legal/privacy-policy').join('/') })"></span>
+        </label>
+        @if (privacy.invalid && privacy.touched) {
+          <span id="contact-privacy-error" class="error" role="alert">
+            {{ t('contactForm.privacyRequired') }}
+          </span>
+        }
+      </div>
+
+      @if (status() === 'error') {
+        <div class="feedback error-banner" role="alert">
+          <p>{{ t('contactForm.error') }}</p>
+          <button type="button" class="secondary-button" (click)="retry()">
+            {{ t('contactForm.retry') }}
+          </button>
+        </div>
+      }
+
+      <div class="actions">
+        <button type="submit"
+                class="primary-button"
+                [disabled]="status() === 'loading'">
+          {{ status() === 'loading' ? t('contactForm.sending') : t('contactForm.send') }}
+        </button>
+      </div>
+
+    </form>
+  }
+</section>

@@ -1,0 +1,130 @@
+:host {
+  display: block;
+}
+
+section {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: var(--window-border);
+  border-radius: 12px;
+}
+
+h1 {
+  margin: 0 0 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid light-dark(rgba(0, 0, 0, 0.18), rgba(255, 255, 255, 0.18));
+  background: light-dark(rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0.04));
+  color: inherit;
+  transition: border-color 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: light-dark(#0071E3, #0A84FF);
+  }
+
+  &.ng-invalid.ng-touched {
+    border-color: light-dark(#c00, #ff6b6b);
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.field--checkbox {
+  gap: 0.25rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  cursor: pointer;
+
+  & input[type="checkbox"] {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+    accent-color: light-dark(#0071E3, #0A84FF);
+    cursor: pointer;
+  }
+
+  & a {
+    color: light-dark(#0071E3, #0A84FF);
+  }
+}
+
+.error {
+  font-size: 0.8125rem;
+  color: light-dark(#c00, #ff6b6b);
+}
+
+.feedback {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.feedback.success {
+  background: light-dark(rgba(0, 160, 80, 0.1), rgba(0, 220, 100, 0.12));
+  color: light-dark(#006830, #00e060);
+  border: 1.5px solid light-dark(rgba(0, 160, 80, 0.3), rgba(0, 220, 100, 0.25));
+}
+
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: light-dark(rgba(200, 0, 0, 0.08), rgba(255, 80, 80, 0.1));
+  color: light-dark(#c00, #ff6b6b);
+  border: 1.5px solid light-dark(rgba(200, 0, 0, 0.2), rgba(255, 80, 80, 0.2));
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
