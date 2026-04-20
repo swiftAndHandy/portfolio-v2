@@ -1,5 +1,12 @@
 <article *transloco="let t">
-  <p>{{ t('about.p1') }}</p>
-  <p>{{ t('about.p2') }}</p>
-  <p>{{ t('about.p3') }}</p>
+  <h1>{{ t('nav.about') }}</h1>
+  <div class="body">
+    <p>{{ t('about.p1') }}</p>
+    <p>{{ t('about.p2') }}</p>
+    <p>{{ t('about.p3') }}</p>
+  </div>
+  <div class="actions">
+    <a [routerLink]="toPath('projects')" class="primary-button">{{ t('cta.projects') }}</a>
+    <a [routerLink]="toPath('contact')" class="secondary-button">{{ t('cta.contact') }}</a>
+  </div>
 </article>

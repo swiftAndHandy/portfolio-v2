@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .filter-bar {
   display: flex;
   gap: 8px;

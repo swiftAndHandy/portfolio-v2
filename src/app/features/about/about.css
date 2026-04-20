@@ -1,6 +1,42 @@
+:host {
+  display: block;
+}
+
 article {
-  margin: 0 auto;
-  padding: 16px;
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 2rem;
   border: var(--window-border);
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.body p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: light-dark(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0.75));
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+

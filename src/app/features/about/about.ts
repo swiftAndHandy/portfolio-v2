@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
-import {TranslocoDirective} from '@jsverse/transloco';
+import {Component, inject} from '@angular/core';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+import { TranslocoDirective } from '@jsverse/transloco';
+import {LangService} from '../../core/i18n/lang.service';
 
 @Component({
   selector: 'app-about',
   imports: [
-    TranslocoDirective
+    TranslocoDirective,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {}
+export class About {
+  langService = inject(LangService);
+
+  toPath(path: string) {
+    return this.langService.routerLinkToPath(path);
+  }
+}

@@ -113,3 +113,19 @@ dialog.is-fullscreen {
   height: 12px;
   cursor: sw-resize;
 }
+
+@media (max-width: 768px) {
+  dialog {
+    width: calc(100vw - var(--fullscreen-spacing) * 2) !important;
+    height: calc(100dvh - var(--fullscreen-spacing) * 2) !important;
+    top: var(--fullscreen-spacing) !important;
+    left: var(--fullscreen-spacing) !important;
+    translate: 0 !important;
+    border-radius: 18px;
+  }
+
+  .drag-handle,
+  .resize-handle {
+    display: none;
+  }
+}
