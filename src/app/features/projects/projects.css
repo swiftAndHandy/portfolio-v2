@@ -19,7 +19,7 @@
     }
 
     &[aria-pressed="true"] {
-      background:light-dark(#0071E3, #0A84FF);
+      background:light-dark(#0071E3, #0060CC);
       color: white;
       border-color: transparent;
     }

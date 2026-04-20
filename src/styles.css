@@ -43,7 +43,7 @@ main {
 
 .primary-button {
   outline-color: red;
-  background: light-dark(#0071E3, #0A84FF);
+  background: light-dark(#0071E3, #0060CC);
   color: white;
   border: none;
   border-radius: 980px;
