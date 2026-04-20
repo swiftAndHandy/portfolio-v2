@@ -75,6 +75,8 @@
     "title": "Kontaktformular"
   },
   "about": {
+    "photoAlt": "Foto von Andre Veltens",
+    "downloadCv": "Lebenslauf herunterladen",
     "p1": "Ich bin Andre, Frontend- und iOS-Developer aus Paderborn. Als Quereinsteiger habe ich mir meine Kenntnisse in Angular, TypeScript und SwiftUI neben Beruf und Studium erarbeitet – Backend kommt gerade noch dazu.",
     "p2": "Durch meinen pflegerischen Hintergrund achte ich dabei besonders auf die Umsetzung des WCAG 2.2 AA Standards.",
     "p3": "Dank meines Jurastudiums übernehme ich im Team gerne die Arbeiten, die sonst keiner machen möchte: Sich mit rechtlichen Fragestellungen befassen."

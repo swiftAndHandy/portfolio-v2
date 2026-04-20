@@ -1,12 +1,39 @@
 <article *transloco="let t">
-  <h1>{{ t('nav.about') }}</h1>
-  <div class="body">
-    <p>{{ t('about.p1') }}</p>
-    <p>{{ t('about.p2') }}</p>
-    <p>{{ t('about.p3') }}</p>
+  <div class="photo-col">
+    <img src="/assets/img/veltens_portrait_nobg.webp"
+         [alt]="t('about.photoAlt')"
+         class="photo"
+         width="423" height="500" />
+    <div class="social">
+      <a href="https://www.linkedin.com/in/veltens/"
+         target="_blank"
+         rel="noopener noreferrer"
+         [attr.aria-label]="t('footer.linkedIn')">
+        LinkedIn
+      </a>
+      <a href="https://github.com/swiftAndHandy"
+         target="_blank"
+         rel="noopener noreferrer"
+         [attr.aria-label]="t('footer.github')">
+        GitHub
+      </a>
+      <a href="#"
+         class="secondary-button"
+         [attr.aria-label]="t('about.downloadCv')">
+        {{ t('about.downloadCv') }}
+      </a>
+    </div>
   </div>
-  <div class="actions">
-    <a [routerLink]="toPath('projects')" class="primary-button">{{ t('cta.projects') }}</a>
-    <a [routerLink]="toPath('contact')" class="secondary-button">{{ t('cta.contact') }}</a>
+  <div class="content">
+    <h1>{{ t('nav.about') }}</h1>
+    <div class="body">
+      <p>{{ t('about.p1') }}</p>
+      <p>{{ t('about.p2') }}</p>
+      <p>{{ t('about.p3') }}</p>
+    </div>
+    <div class="actions">
+      <a [routerLink]="toPath('projects')" class="primary-button">{{ t('cta.projects') }}</a>
+      <a [routerLink]="toPath('contact')" class="secondary-button">{{ t('cta.contact') }}</a>
+    </div>
   </div>
 </article>

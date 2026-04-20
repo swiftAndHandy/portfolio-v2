@@ -8,7 +8,6 @@ import {LangService} from '../../core/i18n/lang.service';
   imports: [
     TranslocoDirective,
     RouterLink,
-    RouterLinkActive
   ],
   templateUrl: './about.html',
   styleUrl: './about.css',

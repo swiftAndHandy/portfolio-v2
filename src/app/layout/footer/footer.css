@@ -1,5 +1,6 @@
 footer {
   container-type: inline-size;
+  width: 100%;
   border-top: var(--window-border);
   margin-top: 3rem;
 }
