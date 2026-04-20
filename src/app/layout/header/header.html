@@ -8,7 +8,10 @@
       <nav [attr.aria-label]="t('nav.mainNav')">
         <ul>
           <li>
-            <a [routerLink]="toPath('about')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <a [routerLink]="toPath('')"
+               routerLinkActive="active"
+               [routerLinkActiveOptions]="{ exact: true }"
+               ariaCurrentWhenActive="page">
               {{ t('nav.about') }}
             </a>
           </li>

@@ -4,11 +4,14 @@ icon-sun, icon-moon {
   height: 1.25rem;
 }
 
-header {
-  container-type: inline-size;
+:host {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+header {
+  container-type: inline-size;
   background: light-dark(rgba(255, 255, 255, 0.8), rgba(28, 28, 30, 0.85));
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);

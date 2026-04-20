@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import {langGuard} from './core/i18n/lang-guard';
 import {Home} from './features/home/home';
+import {About} from './features/about/about';
 import {PrivacyPolicy} from './features/legal/privacy-policy';
 import {LegalNotice} from './features/legal/legal-notice';
 import {Projects} from './features/projects/projects';

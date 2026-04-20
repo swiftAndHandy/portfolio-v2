@@ -5,10 +5,11 @@ footer {
   margin-top: 3rem;
 }
 
-icon-linkedin {
-  display: block;
-  width: 1.25rem;
-  height: 1.25rem;
+icon-linkedin,
+.social img {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .limiter {
@@ -40,7 +41,14 @@ icon-linkedin {
   grid-area: copyright;
   margin: 0;
   font-size: 0.875rem;
+  text-align: center;
   color: light-dark(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.5));
+}
+
+@container (width >= 768px) {
+  .copyright {
+    text-align: left;
+  }
 }
 
 /* ── Legal nav ───────────────────────── */
@@ -83,12 +91,18 @@ nav a {
   grid-area: social;
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px;
+  border: 1.5px solid light-dark(rgba(0, 0, 0, 0.18), rgba(255, 255, 255, 0.18));
+  border-radius: 12px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 @container (width >= 768px) {
   .social {
-    justify-content: flex-end;
+    margin: 0 0 0 auto;
   }
 }
 
@@ -101,6 +115,10 @@ nav a {
   border-radius: 8px;
   color: light-dark(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.5));
   transition: background 0.15s ease, color 0.15s ease;
+
+  & img {
+    display: block;
+  }
 
   &:hover {
     background: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
