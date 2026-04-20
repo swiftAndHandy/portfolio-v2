@@ -83,4 +83,12 @@ header h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  & a {
+    text-decoration: none;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+  }
 }

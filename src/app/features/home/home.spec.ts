@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { Home } from './home';
 import {getTranslocoModule} from '../../../testing/transloco-testing/transloco-testing.module';
@@ -13,6 +14,7 @@ describe('Home', () => {
         getTranslocoModule(),
         Home
       ],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Home);

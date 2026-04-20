@@ -73,7 +73,8 @@
           "options": {
             "setupFiles": [
               "src/testing/setup.ts"
-            ]
+            ],
+            "tsConfig": "tsconfig.spec.json"
           }
         }
       }

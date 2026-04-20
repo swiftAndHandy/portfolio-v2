@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  scrollbar-gutter: stable;
+  scrollbar-gutter: stable both-edges;
 }
 
 body:has(dialog[open]) {
@@ -31,6 +31,18 @@ body:has(dialog[open]) {
   color-scheme: dark;
   --window-shadow: 0 2px 8px rgba(0,0,0,0.5);
   --shadow-inset: rgba(0, 0, 0, 0.3);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 nav > ul {
@@ -69,7 +81,6 @@ main {
 }
 
 .secondary-button {
-  outline-color: red;
   background: transparent;
   color: light-dark(#0071E3, #0A84FF);
   border: none;

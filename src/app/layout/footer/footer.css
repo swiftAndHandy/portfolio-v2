@@ -40,7 +40,7 @@ icon-linkedin {
   grid-area: copyright;
   margin: 0;
   font-size: 0.875rem;
-  color: light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.4));
+  color: light-dark(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.5));
 }
 
 /* ── Legal nav ───────────────────────── */
@@ -64,7 +64,7 @@ nav a {
   border-radius: 6px;
   font-size: 0.875rem;
   text-decoration: none;
-  color: light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.4));
+  color: light-dark(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.5));
   transition: background 0.15s ease, color 0.15s ease;
 
   &:hover {

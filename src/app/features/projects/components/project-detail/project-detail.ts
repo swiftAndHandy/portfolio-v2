@@ -2,11 +2,13 @@ import {Component, inject, input} from '@angular/core';
 import {Project} from '../../../../core/interfaces/project';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {LangService} from '../../../../core/i18n/lang.service';
+import {ExternalLinkIcon} from '../../../../shared/icons/external-link';
 
 @Component({
   selector: 'app-project-detail',
   imports: [
-    TranslocoDirective
+    TranslocoDirective,
+    ExternalLinkIcon
   ],
   templateUrl: './project-detail.html',
   styleUrls: ['./project-detail.css', '../tags.css'],

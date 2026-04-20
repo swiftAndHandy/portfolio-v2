@@ -5,18 +5,20 @@
          class="photo"
          width="423" height="500" />
     <div class="social">
-      <a href="https://www.linkedin.com/in/veltens/"
-         target="_blank"
-         rel="noopener noreferrer"
-         [attr.aria-label]="t('footer.linkedIn')">
-        LinkedIn
-      </a>
-      <a href="https://github.com/swiftAndHandy"
-         target="_blank"
-         rel="noopener noreferrer"
-         [attr.aria-label]="t('footer.github')">
-        GitHub
-      </a>
+      <div class="social-profiles">
+        <a href="https://www.linkedin.com/in/veltens/"
+           target="_blank"
+           rel="noopener noreferrer"
+           [attr.aria-label]="t('footer.linkedIn')">
+          LinkedIn <icon-external-link />
+        </a>
+        <a href="https://github.com/swiftAndHandy"
+           target="_blank"
+           rel="noopener noreferrer"
+           [attr.aria-label]="t('footer.github')">
+          GitHub <icon-external-link />
+        </a>
+      </div>
       <a href="#"
          class="secondary-button"
          [attr.aria-label]="t('about.downloadCv')">
@@ -31,9 +33,10 @@
       <p>{{ t('about.p2') }}</p>
       <p>{{ t('about.p3') }}</p>
     </div>
-    <div class="actions">
-      <a [routerLink]="toPath('projects')" class="primary-button">{{ t('cta.projects') }}</a>
-      <a [routerLink]="toPath('contact')" class="secondary-button">{{ t('cta.contact') }}</a>
-    </div>
   </div>
 </article>
+
+<div class="actions" *transloco="let t">
+  <a [routerLink]="toPath('projects')" class="primary-button">{{ t('cta.projects') }}</a>
+  <a [routerLink]="toPath('contact')" class="secondary-button">{{ t('cta.contact') }}</a>
+</div>
