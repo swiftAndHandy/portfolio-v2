@@ -3,13 +3,13 @@ import {Language} from '../i18n/languages';
 export interface Project {
   id: string;
   title: string;
+  category: 'frontend' | 'backend';
   overviewTags: string[];
   detailTags: string[];
   description: Record<Language, string>;
   longDescription: Record<Language, string>;
   logo: {
     url: string,
-    alt: Record<Language, string>;
   };
   thumbnail: {
     url: string

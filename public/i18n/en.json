@@ -49,7 +49,9 @@
       "tagList": "Missing value for 'project.detail.tagList'",
       "article": "Detailed Information about {{ project }}"
     },
+    "liveUrl": "Missing value for 'project.liveUrl'",
     "appstoreLink": "Missing value for 'project.appstoreLink'",
+    "githubUrl": "Missing value for 'project.githubUrl'",
     "learnMore": "Missing value for 'project.learnMore'",
     "openPreview": "Missing value for 'project.openPreview'"
   },

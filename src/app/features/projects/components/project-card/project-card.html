@@ -11,13 +11,13 @@
         <li [class]="'tag --' + tag.toLowerCase().replace(/\s+/g, '-')">{{ tag }}</li>
       }
     </ul>
-    <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt" />
+    <img class="thumbnail" [src]="project().thumbnail.url" [alt]="project().thumbnail.alt[langService.currentLang()]" />
     <p aria-hidden="true" [id]="'description-' + project().id">{{ project().description[langService.currentLang()] }}</p>
     <button class="primary-button learn-more" (click)="overlay.open()" transloco="project.learnMore"></button>
   </article>
 } @else {
   <button *transloco="let t" class="project-icon" (click)="launchPreview()" #projectIcon>
-    <img [ngSrc]="project().logo.url" [alt]="t('project.openPreview') + project().logo.alt" width="48" height="48"/>
+    <img [ngSrc]="project().logo.url" [alt]="t('project.openPreview') + project().title" width="48" height="48"/>
   </button>
 }
 

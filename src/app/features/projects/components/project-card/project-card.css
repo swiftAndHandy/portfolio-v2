@@ -4,7 +4,10 @@
 }
 
 :host.collapsed {
+  container-type: normal;
   place-self: center;
+  width: fit-content;
+  height: fit-content;
 }
 
 article {
