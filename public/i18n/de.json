@@ -28,7 +28,8 @@
     "en": "Englisch"
   },
   "footer": {
-    "linkedIn": "LinkedIn öffnen (extern, neues Fenster)",
+    "linkedIn": "LinkedIn (extern, neues Fenster)",
+    "github": "GitHub (extern, neues Fenster)",
     "legalNav": "Rechtliche Informationen"
   },
   "techstack": {

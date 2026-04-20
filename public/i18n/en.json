@@ -28,7 +28,8 @@
     "en": "English"
   },
   "footer": {
-    "linkedIn": "Missing value for 'footer.linkedIn'",
+    "linkedIn": "LinkedIn (external, new window)",
+    "github": "GitHub (external, new window)",
     "legalNav": "Legal Information"
   },
   "techstack": {
