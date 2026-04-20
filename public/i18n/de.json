@@ -49,9 +49,9 @@
       "tagList": "Verwendete Technologien",
       "article": "Informationen über {{ project }}"
     },
-    "liveUrl": "Missing value for 'project.liveUrl'",
-    "appstoreLink": "App Store öffnen",
-    "githubUrl": "Missing value for 'project.githubUrl'",
+    "liveUrl": "Live Test",
+    "appstoreLink": "Im App Store ansehen",
+    "githubUrl": "Bei GitHub ansehen",
     "learnMore": "Mehr erfahren…",
     "openPreview": "Öffne Vorschau für: "
   },

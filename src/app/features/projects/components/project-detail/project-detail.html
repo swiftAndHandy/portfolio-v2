@@ -8,12 +8,15 @@
     </ul>
   </header>
   @if (project().liveUrl) {
-    <a class="primary-button" target="_blank" [href]="project().liveUrl" rel="noopener norefferer">{{ t('project.liveUrl') }}</a>
+    <a class="primary-button" target="_blank" [href]="project().liveUrl" rel="noopener noreferrer"
+       [attr.aria-label]="t('project.liveUrl') + ' – ' + project().title">{{ t('project.liveUrl') }}</a>
   }
   @if (project().appstoreUrl) {
-    <a class="primary-button" target="_blank" [href]="project().appstoreUrl" rel="noopener norefferer">{{ t('project.appstoreLink') }}</a>
+    <a class="primary-button" target="_blank" [href]="project().appstoreUrl" rel="noopener noreferrer"
+       [attr.aria-label]="t('project.appstoreLink') + ' – ' + project().title">{{ t('project.appstoreLink') }}</a>
   }
   @if (project().githubUrl) {
-    <a class="primary-button" target="_blank" [href]="project().githubUrl" rel="noopener norefferer">{{ t('project.githubUrl') }}</a>
+    <a class="primary-button" target="_blank" [href]="project().githubUrl" rel="noopener noreferrer"
+       [attr.aria-label]="t('project.githubUrl') + ' – ' + project().title">{{ t('project.githubUrl') }}</a>
   }
 </article>

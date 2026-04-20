@@ -46,14 +46,14 @@
   },
   "project": {
     "detail": {
-      "tagList": "Missing value for 'project.detail.tagList'",
+      "tagList": "Used technologies",
       "article": "Detailed Information about {{ project }}"
     },
-    "liveUrl": "Missing value for 'project.liveUrl'",
-    "appstoreLink": "Missing value for 'project.appstoreLink'",
-    "githubUrl": "Missing value for 'project.githubUrl'",
-    "learnMore": "Missing value for 'project.learnMore'",
-    "openPreview": "Missing value for 'project.openPreview'"
+    "liveUrl": "Live Test",
+    "appstoreLink": "Show in App Store",
+    "githubUrl": "Show at GitHub",
+    "learnMore": "Show details…",
+    "openPreview": "Open Preview for: "
   },
   "projects": {
     "filter": {
