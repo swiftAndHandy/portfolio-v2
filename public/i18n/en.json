@@ -73,7 +73,9 @@
   },
   "home": {
     "atf": {
-      "title": "Missing value for 'home.atf.title'"
+      "title": "Hi, I'm Andre!",
+      "subtitle": "Web & iOS developer from Germany",
+      "cta": "See projects"
     },
     "title": "Portfolio"
   },
@@ -81,6 +83,6 @@
     "title": "Contact me"
   },
   "overlay": {
-    "open": "Missing value for 'overlay.open'"
+    "open": "Show {{ target }}"
   }
 }
