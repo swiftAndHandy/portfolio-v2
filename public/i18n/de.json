@@ -44,6 +44,18 @@
       "other": "Sonstige Kenntnisse"
     }
   },
+  "projects": {
+    "title": "Projekte",
+    "filter": {
+      "list": "Suchfilter",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "both": "Beides"
+    },
+    "preview": {
+      "tagList": "Verwendete Sprachen"
+    }
+  },
   "project": {
     "detail": {
       "tagList": "Verwendete Technologien",
@@ -55,17 +67,8 @@
     "learnMore": "Mehr erfahren…",
     "openPreview": "Öffne Vorschau für: "
   },
-  "projects": {
-    "filter": {
-      "list": "Suchfilter",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "both": "Beides"
-    },
-    "preview": {
-      "tagList": "Verwendete Sprachen"
-    },
-    "title": "Projekte"
+  "privacyPolicy": {
+    "title": "Datenschutzerklärung"
   },
   "home": {
     "atf": {

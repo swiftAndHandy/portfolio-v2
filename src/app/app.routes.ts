@@ -45,8 +45,8 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'de',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    redirectTo: 'de'
   },
 
   {

@@ -10,6 +10,10 @@
 src/environments/environment.ts
 src/environments/environment.development.ts
 
+# Legal Notice / Pricacy Policy
+src/features/legal-notice.html
+src/features/pricacy-policy.html
+
 # Node
 /node_modules
 npm-debug.log

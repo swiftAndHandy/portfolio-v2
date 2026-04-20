@@ -44,6 +44,18 @@
       "other": "Other skills"
     }
   },
+  "projects": {
+    "title": "Projects",
+    "filter": {
+      "list": "Search filter",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "both": "All"
+    },
+    "preview": {
+      "tagList": "Missing value for 'projects.preview.tagList'"
+    }
+  },
   "project": {
     "detail": {
       "tagList": "Used technologies",
@@ -55,17 +67,8 @@
     "learnMore": "Show details…",
     "openPreview": "Open Preview for: "
   },
-  "projects": {
-    "filter": {
-      "list": "Search filter",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "both": "All"
-    },
-    "preview": {
-      "tagList": "Missing value for 'projects.preview.tagList'"
-    },
-    "title": "Projects"
+  "privacyPolicy": {
+    "title": "Privacy Policy"
   },
   "home": {
     "atf": {
