@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {TranslocoDirective} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [
+    TranslocoDirective
+  ],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })

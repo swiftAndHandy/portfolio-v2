@@ -54,7 +54,7 @@ export class SeoService {
     if (path.includes('about')) return 'about';
     if (path.includes('contact')) return 'contactForm';
     if (path.includes('projects')) return 'projects';
-    if (path.includes('techstack')) return 'techstack';
+    if (path.includes('tech-stack')) return 'techstack';
 
     return 'home';
   }

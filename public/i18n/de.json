@@ -28,9 +28,9 @@
     "en": "Englisch"
   },
   "footer": {
+    "legalNav": "Rechtliche Informationen",
     "linkedIn": "LinkedIn (extern, neues Fenster)",
-    "github": "GitHub (extern, neues Fenster)",
-    "legalNav": "Rechtliche Informationen"
+    "github": "GitHub (extern, neues Fenster)"
   },
   "techstack": {
     "title": "Tech-Stack",
@@ -71,16 +71,18 @@
   "privacyPolicy": {
     "title": "Datenschutzerklärung"
   },
-  "home": {
-    "atf": {
-      "title": "Hi, ich bin Andre!",
-      "subtitle": "Web- und iOS Entwickler aus Deutschland",
-      "cta": "Projekte ansehen"
-    },
-    "title": "Portfolio"
-  },
   "contactForm": {
     "title": "Kontaktformular"
+  },
+  "about": {
+    "paragraph": "Ich bin Andre, Frontend- und iOS-Developer aus Paderborn. Als Quereinsteiger habe ich mir meine Kenntnisse in Angular, TypeScript und SwiftUI neben Beruf und Studium erarbeitet; Backend kommt gerade noch dazu. Durch meinen pflegerischen Hintergrund achte ich dabei besonders auf die Umsetzung des WCAG 2.2 AA Standards. Dank meines Jurastudiums übernehme ich im Team gerne die Arbeiten, die sonst keiner machen möchte: Sich mit rechtlichen Fragestellungen befassen."
+  },
+  "cta": {
+    "projects": "Meine Projekte anschauen",
+    "contact": "Jetzt Kontakt aufnehmen"
+  },
+  "home": {
+    "title": "Portfolio"
   },
   "overlay": {
     "open": "{{ target }} anzeigen"
