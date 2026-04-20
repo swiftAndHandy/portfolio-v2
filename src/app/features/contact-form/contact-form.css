@@ -3,6 +3,8 @@
 }
 
 section {
+  container-type: inline-size;
+  container-name: contact-form;
   max-width: 640px;
   margin: 2rem auto;
   padding: 2rem;
@@ -48,7 +50,6 @@ textarea {
   box-sizing: border-box;
 
   &:focus {
-    outline: none;
     border-color: light-dark(#0071E3, #0A84FF);
   }
 
@@ -104,9 +105,21 @@ textarea {
 }
 
 .feedback.success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   background: light-dark(rgba(0, 160, 80, 0.1), rgba(0, 220, 100, 0.12));
   color: light-dark(#006830, #00e060);
   border: 1.5px solid light-dark(rgba(0, 160, 80, 0.3), rgba(0, 220, 100, 0.25));
+}
+
+@container contact-form (width >= 480px) {
+  .feedback.success {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .error-banner {

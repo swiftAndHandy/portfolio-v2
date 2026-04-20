@@ -4,6 +4,9 @@
   @if (status() === 'success') {
     <div class="feedback success" role="status">
       <p>{{ t('contactForm.success') }}</p>
+      <button class="secondary-button" (click)="retry()">
+        {{ t('contactForm.newMessage') }}
+      </button>
     </div>
   } @else {
     <form [formGroup]="form" (ngSubmit)="submit()" novalidate>

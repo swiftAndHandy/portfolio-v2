@@ -45,7 +45,7 @@ export class ContactForm {
     if (this.form.invalid || this.status() === 'loading') return;
 
     this.status.set('loading');
-    this.http.post(environment.contactApiUrl, this.form.value).subscribe({
+    this.http.post(environment.contactApiUrl, this.form.value, { responseType: 'text' }).subscribe({
       next: () => {
         this.status.set('success');
         this.form.reset();

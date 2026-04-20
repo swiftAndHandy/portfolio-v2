@@ -88,7 +88,8 @@
     "emailRequired": "Please enter a valid email address.",
     "messageRequired": "Please enter a message (min. 10 characters).",
     "privacyConsent": "I have read the <a href='{{ link }}'>privacy policy</a> and consent to the processing of my data.",
-    "privacyRequired": "Please accept the privacy policy."
+    "privacyRequired": "Please accept the privacy policy.",
+    "newMessage": "Send another message"
   },
   "about": {
     "photoAlt": "Photo of Andre Veltens",

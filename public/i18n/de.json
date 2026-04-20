@@ -88,7 +88,8 @@
     "emailRequired": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "messageRequired": "Bitte gib eine Nachricht ein (min. 10 Zeichen).",
     "privacyConsent": "Ich habe die <a href='{{ link }}'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
-    "privacyRequired": "Bitte stimme der Datenschutzerklärung zu."
+    "privacyRequired": "Bitte stimme der Datenschutzerklärung zu.",
+    "newMessage": "Weitere Nachricht senden"
   },
   "about": {
     "photoAlt": "Foto von Andre Veltens",

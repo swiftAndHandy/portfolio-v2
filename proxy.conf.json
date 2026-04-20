@@ -1,0 +1,7 @@
+{
+  "/sendMail.php": {
+    "target": "https://veltens.info",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
