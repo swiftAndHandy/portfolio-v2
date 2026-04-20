@@ -23,7 +23,7 @@
     "privacyPolicy": "Privacy Policy"
   },
   "langMenu": {
-    "aria": "Missing value for 'langMenu.aria'",
+    "aria": "Available languages",
     "de": "German",
     "en": "English"
   },
@@ -37,7 +37,7 @@
     "category": {
       "frontend": "Frontend",
       "backend": "Backend",
-      "other": "Sonstiges"
+      "other": "Other"
     },
     "list": {
       "frontend": "Frontend skills",
@@ -54,7 +54,7 @@
       "both": "All"
     },
     "preview": {
-      "tagList": "Missing value for 'projects.preview.tagList'"
+      "tagList": "Used technologies"
     }
   },
   "project": {
