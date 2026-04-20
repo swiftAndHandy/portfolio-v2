@@ -1,6 +1,7 @@
-import {Component, input} from '@angular/core';
+import {Component, inject, input} from '@angular/core';
 import {Project} from '../../../../core/interfaces/project';
 import {TranslocoDirective} from '@jsverse/transloco';
+import {LangService} from '../../../../core/i18n/lang.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -12,4 +13,5 @@ import {TranslocoDirective} from '@jsverse/transloco';
 })
 export class ProjectDetail {
   public project = input.required<Project>();
+  protected langService = inject(LangService);
 }

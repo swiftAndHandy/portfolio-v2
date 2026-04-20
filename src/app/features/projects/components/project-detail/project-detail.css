@@ -1,7 +1,80 @@
+:host {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+article {
+  container-type: inline-size;
+  container-name: project-detail;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 .techstack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@container project-detail (width >= 480px) {
+  .body {
+    grid-template-columns: min(600px, 50%) 1fr;
+  }
+}
+
+.screenshot {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: var(--window-border);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  min-width: 0;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: light-dark(rgba(0, 0, 0, 0.72), rgba(255, 255, 255, 0.68));
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }

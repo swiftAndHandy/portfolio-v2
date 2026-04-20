@@ -3,7 +3,7 @@
     "skipNav": "Zum Inhalt springen"
   },
   "action": {
-    "close": "Close",
+    "close": "Schließen",
     "exitFullscreen": "Schließe Vollbild für {{ target }}",
     "enterFullscreen": "Öffne {{ target }} im Vollbild",
     "targetMissing": "Unbekannt"
