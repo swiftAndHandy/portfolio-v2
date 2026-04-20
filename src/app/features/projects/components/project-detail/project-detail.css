@@ -1,8 +1,8 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-height: 0;
-  overflow-y: auto;
 }
 
 article {
@@ -12,6 +12,9 @@ article {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 header {
@@ -55,7 +58,7 @@ header h2 {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  border: var(--window-border);
+  outline: var(--window-border);
 }
 
 .detail {

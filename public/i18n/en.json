@@ -75,7 +75,9 @@
     "title": "Contact me"
   },
   "about": {
-    "paragraph": "I'm Andre, a frontend and iOS developer from Paderborn, Germany. As a career changer, I built my skills in Angular, TypeScript and SwiftUI alongside work and university – backend is currently in progress. My background in nursing gives me a particular appreciation for WCAG 2.2 AA compliance. And thanks to my law degree, I'm happy to take on the work nobody else wants to do: dealing with the legal questions."
+    "p1": "I'm Andre, a frontend and iOS developer from Paderborn, Germany. As a career changer, I built my skills in Angular, TypeScript and SwiftUI alongside work and university – backend is currently in progress.",
+    "p2": "My background in nursing gives me a particular appreciation for WCAG 2.2 AA compliance.",
+    "p3": "And thanks to my law degree, I'm happy to take on the work nobody else wants to do: dealing with the legal questions."
   },
   "home": {
     "atf": {
