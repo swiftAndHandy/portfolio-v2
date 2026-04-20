@@ -1,2 +1,6 @@
 <ng-content />
-<span [aria-hidden]="ariaHidden()" [style.left.px]="mouseX()" [style.top.px]="mouseY()" class="tooltip">{{ text() }}</span>
+<span [attr.aria-hidden]="ariaHidden()"
+      [style.left.px]="mouseX()"
+      [style.top.px]="mouseY()"
+      class="tooltip"
+      [class]="position()">{{ text() }}</span>
