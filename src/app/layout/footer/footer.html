@@ -1,6 +1,23 @@
 <footer>
-  <div class="limiter" *transloco="let t;">
-    <div class="links">
+  <div class="limiter" *transloco="let t">
+    <p class="copyright">© {{ year }} Andre Veltens</p>
+
+    <nav [attr.aria-label]="t('footer.legalNav')">
+      <ul>
+        <li>
+          <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.legalNotice') }}
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="toPath('legal/privacy-policy')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            {{ t('nav.privacyPolicy') }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="social">
       <app-tooltip [ariaHidden]="true" text="LinkedIn">
         <a href="https://www.linkedin.com/in/veltens/"
            target="_blank"
@@ -14,27 +31,12 @@
            target="_blank"
            rel="noopener noreferrer"
            [attr.aria-label]="t('footer.github')">
-          <img [ngSrc]="!colorSchemeService.darkModeIsActive()
-          ? '/assets/img/github_logo-light.svg'
-          : '/assets/img/github_logo-dark.svg'"
-               width="24" height="24" alt="" />
+          <img [ngSrc]="colorSchemeService.darkModeIsActive()
+               ? '/assets/img/github_logo-dark.svg'
+               : '/assets/img/github_logo-light.svg'"
+               width="24" height="24" alt=""/>
         </a>
       </app-tooltip>
-
-      <nav [attr.aria-label]="t('footer.legalNav')">
-        <ul>
-          <li>
-            <a [routerLink]="toPath('legal/legal-notice')" routerLinkActive="active" ariaCurrentWhenActive="page">
-              {{ t('nav.legalNotice') }}</a>
-          </li>
-          <li>
-            <a [routerLink]="toPath('legal/privacy-policy')" routerLinkActive="active" ariaCurrentWhenActive="page">
-              {{ t('nav.privacyPolicy') }}</a>
-          </li>
-        </ul>
-      </nav>
     </div>
-
-    <p class="copyright">© {{ year }} Andre Veltens</p>
   </div>
 </footer>
