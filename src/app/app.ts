@@ -25,7 +25,7 @@ export class App {
     effect(() => {
       const lang = this.lang();
       if (lang) this.doc.documentElement.lang = lang;
-    })
+    });
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
@@ -34,5 +34,10 @@ export class App {
     });
 
     this.seoService.init();
+  }
+
+  skipToMainContent(event: Event) {
+    event.preventDefault();
+    this.doc.getElementById('main-content')?.focus();
   }
 }
