@@ -61,8 +61,13 @@ main {
   box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: 2px solid light-dark(#0071E3, #0A84FF);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 .primary-button {
-  outline-color: red;
   background: light-dark(#0071E3, #0060CC);
   color: white;
   border: none;
@@ -80,6 +85,7 @@ main {
   &:active {
     transform: scale(0.97);
   }
+
 }
 
 .secondary-button {
