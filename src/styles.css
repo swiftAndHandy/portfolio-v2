@@ -11,10 +11,12 @@ body {
 
 html {
   overflow-y: scroll;
+  --scrollbar-width: 0;
 }
 
-body:has(dialog[open]) {
+html:has(dialog[open]) {
   overflow: hidden;
+  padding-right: var(--scrollbar-width);
 }
 
 :root {

@@ -1,6 +1,5 @@
 import {
   Component,
-  contentChild,
   DOCUMENT,
   ElementRef,
   inject,
@@ -39,6 +38,13 @@ export class Overlay {
   open() {
     const el = this.dialogRef()?.nativeElement;
     if (!el) return;
+
+    const win = this.doc.defaultView;
+    if (win) {
+      const w = win.innerWidth - this.doc.documentElement.clientWidth;
+      this.doc.documentElement.style.setProperty('--scrollbar-width', `${w}px`);
+    }
+
     el.showModal();
 
     if (!el.style.left) {
