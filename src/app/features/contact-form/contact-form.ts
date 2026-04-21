@@ -26,6 +26,7 @@ export class ContactForm {
   status = signal<FormStatus>('idle');
 
   form = this.fb.group({
+    subject: ['', Validators.required],
     name: ['', [
       Validators.required,
       Validators.minLength(2),
@@ -39,6 +40,7 @@ export class ContactForm {
     privacy: [false, Validators.requiredTrue],
   });
 
+  get subject() { return this.form.get('subject')!; }
   get name() { return this.form.get('name')!; }
   get email() { return this.form.get('email')!; }
   get msg() { return this.form.get('msg')!; }

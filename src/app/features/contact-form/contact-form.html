@@ -10,7 +10,6 @@
     </div>
   } @else {
     <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
-
       <div class="field">
         <label for="contact-name">{{ t('contactForm.name') }}</label>
         <input id="contact-name"
@@ -39,6 +38,21 @@
         @if (email.invalid && email.touched) {
           <span id="contact-email-error" class="error">
             {{ t('contactForm.emailRequired') }}
+          </span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="contact-subject">{{ t('contactForm.subject') }}</label>
+        <input id="contact-subject"
+               type="text"
+               formControlName="subject"
+               [placeholder]="t('contactForm.subjectPlaceholder')"
+               [attr.aria-invalid]="subject.invalid && subject.touched"
+               [attr.aria-describedby]="subject.invalid && subject.touched ? 'contact-subject-error' : null" />
+        @if (subject.invalid && subject.touched) {
+          <span id="contact-subject-error" class="error">
+            {{ t('contactForm.subjectRequired') }}
           </span>
         }
       </div>
