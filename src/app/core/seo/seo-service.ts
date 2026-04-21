@@ -1,4 +1,4 @@
-import {DOCUMENT, inject, Injectable} from '@angular/core';
+import {DOCUMENT, inject, Injectable, signal} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {Meta, Title} from '@angular/platform-browser';
 import {TranslocoService} from '@jsverse/transloco';
@@ -13,6 +13,8 @@ export class SeoService {
   private title = inject(Title);
   private meta = inject(Meta);
   private transloco = inject(TranslocoService);
+
+  pageTitle = signal('');
 
   private get baseURL(): string {
     return `${this.doc.location.protocol}//${this.doc.location.host}`;
@@ -45,7 +47,10 @@ export class SeoService {
     const key = this.getRouteKey();
     this.transloco.selectTranslate(`${key}.title`)
       .pipe(take(1))
-      .subscribe(t => this.title.setTitle(t));
+      .subscribe(t => {
+        this.title.setTitle(t);
+        this.pageTitle.set(t);
+      });
   }
 
   private getRouteKey(): string {

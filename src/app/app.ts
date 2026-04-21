@@ -16,7 +16,7 @@ import {filter, skip} from 'rxjs';
 export class App {
   private doc = inject(DOCUMENT);
   private router = inject(Router);
-  private seoService = inject(SeoService);
+  protected seoService = inject(SeoService);
   private translocoService = inject(TranslocoService);
 
   private lang = toSignal(this.translocoService.langChanges$);
@@ -30,15 +30,23 @@ export class App {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       skip(1),
-    ).subscribe(() => {
-      this.doc.getElementById('main-content')?.focus();
-    });
+    ).subscribe(() => this.focusPageHeading());
 
     this.seoService.init();
   }
 
-  skipToMainContent(event: Event) {
+  skipToMainContent(event: Event): void {
     event.preventDefault();
-    this.doc.getElementById('main-content')?.focus();
+    this.focusPageHeading();
+  }
+
+  private focusPageHeading(): void {
+    const h1 = this.doc.querySelector('#main-content h1') as HTMLElement | null;
+    if (h1) {
+      if (!h1.hasAttribute('tabindex')) h1.setAttribute('tabindex', '-1');
+      h1.focus();
+    } else {
+      this.doc.getElementById('main-content')?.focus();
+    }
   }
 }
