@@ -2,7 +2,7 @@
   <h1>{{ t('contactForm.title') }}</h1>
 
   @if (status() === 'success') {
-    <div class="feedback success" role="status">
+    <div #successMsg class="feedback success" role="status" tabindex="-1">
       <p>{{ t('contactForm.success') }}</p>
       <button class="secondary-button" (click)="retry()">
         {{ t('contactForm.newMessage') }}
@@ -18,9 +18,10 @@
                formControlName="name"
                [placeholder]="t('contactForm.namePlaceholder')"
                autocomplete="name"
+               [attr.aria-invalid]="name.invalid && name.touched"
                [attr.aria-describedby]="name.invalid && name.touched ? 'contact-name-error' : null" />
         @if (name.invalid && name.touched) {
-          <span id="contact-name-error" class="error" role="alert">
+          <span id="contact-name-error" class="error">
             {{ t('contactForm.nameRequired') }}
           </span>
         }
@@ -33,9 +34,10 @@
                formControlName="email"
                [placeholder]="t('contactForm.emailPlaceholder')"
                autocomplete="email"
+               [attr.aria-invalid]="email.invalid && email.touched"
                [attr.aria-describedby]="email.invalid && email.touched ? 'contact-email-error' : null" />
         @if (email.invalid && email.touched) {
-          <span id="contact-email-error" class="error" role="alert">
+          <span id="contact-email-error" class="error">
             {{ t('contactForm.emailRequired') }}
           </span>
         }
@@ -47,9 +49,10 @@
                   formControlName="msg"
                   rows="6"
                   [placeholder]="t('contactForm.messagePlaceholder')"
+                  [attr.aria-invalid]="msg.invalid && msg.touched"
                   [attr.aria-describedby]="msg.invalid && msg.touched ? 'contact-msg-error' : null"></textarea>
         @if (msg.invalid && msg.touched) {
-          <span id="contact-msg-error" class="error" role="alert">
+          <span id="contact-msg-error" class="error">
             {{ t('contactForm.messageRequired') }}
           </span>
         }
@@ -64,7 +67,7 @@
           <span [innerHTML]="t('contactForm.privacyConsent', { link: langService.routerLinkToPath('legal/privacy-policy').join('/') })"></span>
         </label>
         @if (privacy.invalid && privacy.touched) {
-          <span id="contact-privacy-error" class="error" role="alert">
+          <span id="contact-privacy-error" class="error">
             {{ t('contactForm.privacyRequired') }}
           </span>
         }

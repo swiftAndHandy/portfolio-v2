@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, ElementRef, inject, Injector, signal, afterNextRender, viewChild} from '@angular/core';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
@@ -17,7 +17,11 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 export class ContactForm {
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);
+  private el = inject(ElementRef);
+  private injector = inject(Injector);
   langService = inject(LangService);
+
+  successMsg = viewChild<ElementRef<HTMLDivElement>>('successMsg');
 
   status = signal<FormStatus>('idle');
 
@@ -40,15 +44,24 @@ export class ContactForm {
   get msg() { return this.form.get('msg')!; }
   get privacy() { return this.form.get('privacy')!; }
 
+  private focusFirstInvalidField() {
+    const firstInvalid = this.el.nativeElement.querySelector('[aria-invalid="true"]');
+    firstInvalid?.focus();
+  }
+
   submit() {
     this.form.markAllAsTouched();
-    if (this.form.invalid || this.status() === 'loading') return;
+    if (this.form.invalid || this.status() === 'loading') {
+      this.focusFirstInvalidField();
+      return;
+    }
 
     this.status.set('loading');
     this.http.post(environment.contactApiUrl, this.form.value, { responseType: 'text' }).subscribe({
       next: () => {
         this.status.set('success');
         this.form.reset();
+        afterNextRender(() => this.successMsg()?.nativeElement.focus(), { injector: this.injector });
       },
       error: () => this.status.set('error'),
     });
