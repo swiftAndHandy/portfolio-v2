@@ -1,24 +1,87 @@
 .tag {
-  --tag-color: gray;
-  --tag-text-color: black;
-  background: var(--tag-color);
-  color: var(--tag-text-color);
+  background: var(--tag-bg, rgba(128, 128, 128, 0.12));
+  color: var(--tag-color, inherit);
+  border: 1px solid var(--tag-border, rgba(128, 128, 128, 0.3));
   border-radius: 980px;
   padding: 4px 12px;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  border: 1px solid color-mix(in srgb, var(--tag-color) 90%, transparent);
   place-content: center;
 
-  &.--swift        { --tag-color: linear-gradient(135deg, #C0392B 80%, #E74C3C); --tag-text-color: white; }
-  &.--swiftui      { --tag-color: linear-gradient(135deg, #0A6EBD 80%, #5DADE2); --tag-text-color: white; }
-  &.--swiftdata    { --tag-color: linear-gradient(135deg, #6B4FBB 80%, #9B59B6); --tag-text-color: white; }
-  &.--healthkit    { --tag-color: linear-gradient(135deg, #C0392B 80%, #FF6B9D); --tag-text-color: white; }
-  &.--cloudkit     { --tag-color: linear-gradient(135deg, #2471A3 80%, #5DADE2); --tag-text-color: white; }
-  &.--angular      { --tag-color: linear-gradient(135deg, #A61C00 80%, #DD0031); --tag-text-color: white; }
-  &.--django       { --tag-color: linear-gradient(135deg, #1B5E20 80%, #2ECC71); --tag-text-color: white; }
-  &.--drf          { --tag-color: linear-gradient(135deg, #B71C1C 80%, #E53935); --tag-text-color: white; }
-  &.--javascript   { --tag-color: linear-gradient(135deg, #F7DC6F 80%, #F4D03F); --tag-text-color: #1a1a1a; }
-  &.--html         { --tag-color: linear-gradient(135deg, #E67E22 80%, #F39C12); --tag-text-color: white; }
+  &.--swift {
+    --tag-bg:     light-dark(rgba(192, 57, 43, 0.1),  rgba(231, 76, 60, 0.22));
+    --tag-color:  light-dark(#7B241C,                 #E74C3C);
+    --tag-border: light-dark(rgba(192, 57, 43, 0.3),  rgba(231, 76, 60, 0.45));
+  }
+  &.--swiftui {
+    --tag-bg:     light-dark(rgba(10, 110, 189, 0.1),  rgba(93, 173, 226, 0.2));
+    --tag-color:  light-dark(#1A5276,                  #5DADE2);
+    --tag-border: light-dark(rgba(10, 110, 189, 0.3),  rgba(93, 173, 226, 0.45));
+  }
+  &.--swiftdata {
+    --tag-bg:     light-dark(rgba(107, 79, 187, 0.1),  rgba(155, 89, 182, 0.2));
+    --tag-color:  light-dark(#4A235A,                  #BB8FCE);
+    --tag-border: light-dark(rgba(107, 79, 187, 0.3),  rgba(155, 89, 182, 0.45));
+  }
+  &.--healthkit {
+    --tag-bg:     light-dark(rgba(192, 57, 43, 0.1),  rgba(255, 107, 157, 0.2));
+    --tag-color:  light-dark(#7B241C,                  #FF6B9D);
+    --tag-border: light-dark(rgba(192, 57, 43, 0.3),  rgba(255, 107, 157, 0.45));
+  }
+  &.--cloudkit {
+    --tag-bg:     light-dark(rgba(36, 113, 163, 0.1),  rgba(93, 173, 226, 0.2));
+    --tag-color:  light-dark(#1B4F72,                  #7FB3D3);
+    --tag-border: light-dark(rgba(36, 113, 163, 0.3),  rgba(93, 173, 226, 0.45));
+  }
+  &.--angular {
+    --tag-bg:     light-dark(rgba(166, 28, 0, 0.1),   rgba(221, 0, 49, 0.2));
+    --tag-color:  light-dark(#7B1100,                  #FF4060);
+    --tag-border: light-dark(rgba(166, 28, 0, 0.3),   rgba(221, 0, 49, 0.45));
+  }
+  &.--django {
+    --tag-bg:     light-dark(rgba(27, 94, 32, 0.1),   rgba(46, 204, 113, 0.18));
+    --tag-color:  light-dark(#145A32,                  #2ECC71);
+    --tag-border: light-dark(rgba(27, 94, 32, 0.3),   rgba(46, 204, 113, 0.4));
+  }
+  &.--drf {
+    --tag-bg:     light-dark(rgba(183, 28, 28, 0.1),  rgba(229, 57, 53, 0.2));
+    --tag-color:  light-dark(#7B1818,                  #EF5350);
+    --tag-border: light-dark(rgba(183, 28, 28, 0.3),  rgba(229, 57, 53, 0.45));
+  }
+  &.--javascript {
+    --tag-bg:     light-dark(rgba(180, 140, 0, 0.1),  rgba(241, 196, 15, 0.18));
+    --tag-color:  light-dark(#7D6608,                  #D4AC0D);
+    --tag-border: light-dark(rgba(180, 140, 0, 0.3),  rgba(241, 196, 15, 0.4));
+  }
+  &.--html {
+    --tag-bg:     light-dark(rgba(211, 84, 0, 0.1),   rgba(230, 126, 34, 0.2));
+    --tag-color:  light-dark(#784212,                  #E59866);
+    --tag-border: light-dark(rgba(211, 84, 0, 0.3),   rgba(230, 126, 34, 0.45));
+  }
+  &.--python {
+    --tag-bg:     light-dark(rgba(55, 118, 171, 0.1),  rgba(55, 118, 171, 0.22));
+    --tag-color:  light-dark(#1A5276,                  #7FB3D3);
+    --tag-border: light-dark(rgba(55, 118, 171, 0.3),  rgba(55, 118, 171, 0.45));
+  }
+  &.--typescript {
+    --tag-bg:     light-dark(rgba(49, 120, 198, 0.1),  rgba(49, 120, 198, 0.22));
+    --tag-color:  light-dark(#1a3c6e,                  #6aaee8);
+    --tag-border: light-dark(rgba(49, 120, 198, 0.3),  rgba(49, 120, 198, 0.45));
+  }
+  &.--firebase {
+    --tag-bg:     light-dark(rgba(245, 124, 0, 0.1),  rgba(245, 124, 0, 0.2));
+    --tag-color:  light-dark(#7E4600,                  #FFA040);
+    --tag-border: light-dark(rgba(245, 124, 0, 0.3),  rgba(245, 124, 0, 0.45));
+  }
+  &.--css {
+    --tag-bg:     light-dark(rgba(38, 77, 228, 0.1),  rgba(38, 77, 228, 0.2));
+    --tag-color:  light-dark(#1A2FA0,                  #7B9EFF);
+    --tag-border: light-dark(rgba(38, 77, 228, 0.3),  rgba(38, 77, 228, 0.45));
+  }
+  &.--wcag-aa {
+    --tag-bg:     light-dark(rgba(27, 94, 32, 0.1),   rgba(39, 174, 96, 0.18));
+    --tag-color:  light-dark(#145A32,                  #58D68D);
+    --tag-border: light-dark(rgba(27, 94, 32, 0.3),   rgba(39, 174, 96, 0.4));
+  }
 }

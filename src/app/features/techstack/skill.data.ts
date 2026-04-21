@@ -59,27 +59,41 @@ export const skills: Skill[] = [
   },
   {
     id: "9",
+    name: "Python",
+    logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-plain.svg",
+    platform: "web",
+    category: "backend"
+  },
+  {
+    id: "10",
     name: "Firebase",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
     platform: "web",
     category: "backend"
   },
   {
-    id: "10",
+    id: "11",
     name: "REST-API",
     logoUrl: "", //TODO: add url
     platform: "all",
     category: "backend"
   },
   {
-    id: "11",
+    id: "12",
     name: "Git",
     logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     platform: "personal",
     category: "other"
   },
   {
-    id: "12",
+    id: "13",
+    name: "Figma",
+    logoUrl: "/assets/img/figma-icon.svg",
+    platform: "personal",
+    category: "other"
+  },
+  {
+    id: "14",
     name: "Scrum",
     logoUrl: "", //TODO add url
     platform: "personal",
