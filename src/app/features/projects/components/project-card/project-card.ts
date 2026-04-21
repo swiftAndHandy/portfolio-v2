@@ -6,6 +6,7 @@ import {TrafficLightBar} from '../../../../shared/traffic-light-bar/traffic-ligh
 import {ProjectDetail} from '../project-detail/project-detail';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {NgOptimizedImage} from '@angular/common';
+import {Tooltip} from '../../../../shared/tooltip/tooltip';
 
 @Component({
   selector: 'app-project-card',
@@ -17,7 +18,8 @@ import {NgOptimizedImage} from '@angular/common';
     Overlay,
     ProjectDetail,
     TranslocoDirective,
-    NgOptimizedImage
+    NgOptimizedImage,
+    Tooltip
   ],
   templateUrl: './project-card.html',
   styleUrls: ['./project-card.css', '../tags.css'],

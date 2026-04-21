@@ -17,4 +17,8 @@ export class LangService {
   routerLinkToPath(path: string) {
     return path ? ['/', this.currentLang(), ...path.split('/')] : ['/', this.currentLang()];
   }
+
+  translate(key: string) {
+    return this.transloco.translate(key);
+  }
 }

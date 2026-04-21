@@ -17,7 +17,9 @@
   </article>
 } @else {
   <button *transloco="let t" class="project-icon" (click)="launchPreview()" #projectIcon>
-    <img [ngSrc]="project().logo.url" [alt]="t('project.openPreview') + project().title" width="48" height="48"/>
+    <app-tooltip [text]="t('project.openPreview') + project().title">
+      <img [ngSrc]="project().logo.url" [alt]="t('project.openPreview') + project().title" width="48" height="48"/>
+    </app-tooltip>
   </button>
 }
 
