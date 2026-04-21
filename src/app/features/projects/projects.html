@@ -1,4 +1,4 @@
-<h1 transloco="projects.title"></h1>
+<h1 *transloco="let t">{{t('projects.title')}}</h1>
 <section *transloco="let t">
   <ul class="filter-bar" [aria-label]="t('projects.filter.list')">
     @for (category of filterOptions; track category) {
