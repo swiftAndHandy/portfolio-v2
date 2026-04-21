@@ -87,17 +87,23 @@ export const skills: Skill[] = [
   },
   {
     id: "13",
+    name: "Postman",
+    logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    platform: "personal",
+    category: "other"
+  },
+  {
+    id: "14",
     name: "Figma",
     logoUrl: "/assets/img/figma-icon.svg",
     platform: "personal",
     category: "other"
   },
   {
-    id: "14",
+    id: "15",
     name: "Scrum",
     logoUrl: "", //TODO add url
     platform: "personal",
     category: "other"
   },
-
 ]
