@@ -35,8 +35,6 @@ icon-linkedin,
   }
 }
 
-/* ── Copyright ───────────────────────── */
-
 .copyright {
   grid-area: copyright;
   margin: 0;
@@ -50,8 +48,6 @@ icon-linkedin,
     text-align: left;
   }
 }
-
-/* ── Legal nav ───────────────────────── */
 
 nav {
   grid-area: nav;
@@ -84,8 +80,6 @@ nav a {
     color: light-dark(#0071E3, #0A84FF);
   }
 }
-
-/* ── Social icons ────────────────────── */
 
 .social {
   grid-area: social;

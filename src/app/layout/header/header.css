@@ -29,8 +29,6 @@ header {
   box-sizing: border-box;
 }
 
-/* ── Nav ─────────────────────────────── */
-
 details.nav-menu {
   display: contents;
 }
@@ -112,8 +110,6 @@ nav a {
     display: none;
   }
 }
-
-/* ── Controls ────────────────────────── */
 
 .controls {
   display: flex;
