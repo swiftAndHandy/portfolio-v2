@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  scrollbar-gutter: stable both-edges;
+  overflow-y: scroll;
 }
 
 body:has(dialog[open]) {
