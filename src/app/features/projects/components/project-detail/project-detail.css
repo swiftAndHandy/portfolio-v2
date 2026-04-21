@@ -79,6 +79,10 @@ header h2 {
   color: light-dark(rgba(0, 0, 0, 0.72), rgba(255, 255, 255, 0.68));
 }
 
+p {
+  color: red;
+}
+
 .links {
   display: flex;
   flex-wrap: wrap;

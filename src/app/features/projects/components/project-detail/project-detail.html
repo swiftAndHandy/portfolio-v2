@@ -10,9 +10,7 @@
   <div class="body">
     <img [src]="project().screenshot.url" [alt]="project().thumbnail.alt[langService.currentLang()]" class="screenshot" />
     <div class="detail">
-      <div class="description">
-        {{project().longDescription[langService.currentLang()]}}
-      </div>
+      <div class="description" [innerHTML]="formattedDescription()"></div>
       <div class="links">
         @if (project().liveUrl) {
           <a class="primary-button" target="_blank" [href]="project().liveUrl" rel="noopener noreferrer"

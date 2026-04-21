@@ -67,6 +67,10 @@ main {
   border-radius: 3px;
 }
 
+.--remove-margin-block-start {
+  margin-block-start: 0;
+}
+
 .primary-button {
   background: light-dark(#0071E3, #0060CC);
   color: white;

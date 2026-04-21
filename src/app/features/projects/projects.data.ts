@@ -52,9 +52,9 @@ export const projects: Project[] =  [
     longDescription: {
       de: "Dieses Portfolio wurde von Grund auf mit Angular 21 entwickelt. " +
         "Es unterstützt Deutsch und Englisch über URL-basiertes Routing, bietet einen Dark- und Light-Mode " +
-        "sowie eine konsequente Umsetzung von Barrierefreiheit nach WCAG-Standards. ",
+        "sowie eine konsequente Umsetzung von Barrierefreiheit nach WCAG 2.2 AA Standards. ",
       en: "This portfolio was built from scratch with Angular 21. It supports German and English via URL-based " +
-        "routing, offers dark and light mode, and implements accessibility consistently following WCAG standards.",
+        "routing, offers dark and light mode, and implements accessibility consistently following WCAG 2.2 AA standards.",
     },
     logo: {
       url: "/assets/img/portfolio_logo.webp",
@@ -91,8 +91,8 @@ export const projects: Project[] =  [
       en: "Kanban backend – featuring token authentication, role-based task assignment, and a clean multi-app architecture."
     },
     longDescription: {
-      de: "KanMind ist ein Projektmanagement-Backend auf Basis von Django REST Framework. Es stellt eine REST-API für Board- und Aufgabenverwaltung bereit – inklusive Benutzerregistrierung und Login via Token-Authentifizierung. Aufgaben können Board-Mitgliedern zugewiesen, kommentiert sowie nach Priorität, Status und Deadline gefiltert werden. Das Backend ist in drei dedizierte Django-Apps gegliedert – auth_app, board_app und task_app – mit einem eigenen UserProfile-Model als Erweiterung des Django-Auth-Systems.",
-      en: "KanMind is a project management backend developed with Django REST Framework. It provides a REST API for board and task management, including user registration and login via token authentication. Tasks can be assigned to board members, commented on, and filtered by priority, status, and deadline. The backend is structured into three dedicated Django apps – auth_app, board_app, and task_app – with a custom UserProfile model extending Django's auth system. CORS is configured for seamless frontend integration."
+      de: "KanMind ist ein Projektmanagement-Backend auf Basis von Django REST Framework. \n\nEs stellt eine REST-API für Board- und Aufgabenverwaltung bereit – inklusive Benutzerregistrierung und Login via Token-Authentifizierung. Aufgaben können Board-Mitgliedern zugewiesen, kommentiert sowie nach Priorität, Status und Deadline gefiltert werden. \n\nDas Backend ist in drei dedizierte Django-Apps gegliedert – auth_app, board_app und task_app – mit einem eigenen UserProfile-Model als Erweiterung des Django-Auth-Systems.",
+      en: "KanMind is a project management backend developed with Django REST Framework. \n\n It provides a REST API for board and task management, including user registration and login via token authentication. Tasks can be assigned to board members, commented on, and filtered by priority, status, and deadline. \n\nThe backend is structured into three dedicated Django apps – auth_app, board_app, and task_app – with a custom UserProfile model extending Django's auth system. CORS is configured for seamless frontend integration."
     },
     logo: {
       url: "/assets/img/kanmind_logo.webp",
@@ -119,6 +119,41 @@ export const projects: Project[] =  [
   },
   {
     id: "4",
+    title: "Returnal",
+    category: 'frontend',
+    overviewTags: ["SwiftUI"],
+    detailTags: ["SwiftUI", "SwiftData"],
+    description: {
+      de: "iOS-App zur Verwaltung von Leihgegenständen – mit permanenten QR-Codes, Entleihverlauf und Batch-Druck. In 7 Tagen als Hackathon-Projekt entwickelt.",
+      en: "iOS app for managing lendable items – with permanent QR codes, borrowing history, and batch printing. Built in 7 days as a hackathon project."
+    },
+    longDescription: {
+      de: "Returnal ermöglicht es, Gegenstände zu verwalten, die man verleihen möchte. Jeder Gegenstand erhält einen permanenten QR-Code, der mit der Systemkamera scannbar ist und direkt auf den Eintrag des Gegenstandes verweist. Entleiher können entweder händisch oder aus den Kontakten hinzugefügt werden.\n\nEin Rückgabetermin kann festgelegt werden. Es gibt einen Entleihverlauf mit dem Ausleihzeitraum und der Gegenstandsbeschreibung bei Leihbeginn. QR-Codes können einzeln oder im Batch mit allen bislang nicht gescannten Objekten gedruckt werden.\n\nEntwickelt in 7 Tagen im Rahmen eines Hackathons.",
+      en: "Returnal lets you manage items you want to lend out. Each item receives a permanent QR code, scannable via the system camera, linking directly to the item's entry. Borrowers can be added manually or imported from contacts.\n\nA return date can be set for each loan. A borrowing history tracks the lending period and the item description at the time of the loan. QR codes can be printed individually or in batch for all items not yet scanned.\n\nBuilt in 7 days as a hackathon project."
+    },
+    logo: {
+      url: "/assets/img/returnal_logo.webp",
+    },
+    thumbnail: {
+      url: "/assets/img/returnal_thumbnail.webp",
+      alt: {
+        de: "",
+        en: ""
+      }
+    },
+    screenshot: {
+      url: "/assets/img/returnal_screenshot.webp",
+      alt: {
+        de: "",
+        en: ""
+      }
+    },
+    liveUrl: "",
+    githubUrl: "https://github.com/swiftAndHandy/Returnal",
+    slug: "returnal",
+  },
+  {
+    id: "5",
     title: "Join",
     category: 'frontend',
     overviewTags: ["JavaScript"],
@@ -157,7 +192,7 @@ export const projects: Project[] =  [
     slug: "join",
   },
   {
-    id: "5",
+    id: "6",
     title: "El Pollo Loco",
     category: 'frontend',
     overviewTags: ["JavaScript"],
