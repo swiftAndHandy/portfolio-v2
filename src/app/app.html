@@ -1,4 +1,5 @@
-<a href="#main-content" (click)="skipToMainContent($event)" class="skip-nav" transloco="a11y.skipNav"></a>
+<a href="#main-content" (click)="skipToMainContent($event)" class="skip-nav"
+   *transloco="let t">{{ t('a11y.skipNav') }}</a>
 <app-header />
 <main id="main-content" tabindex="-1">
   <router-outlet />

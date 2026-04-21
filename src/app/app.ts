@@ -5,7 +5,7 @@ import {SeoService} from './core/seo/seo-service';
 import {Header} from './layout/header/header';
 import {Footer} from './layout/footer/footer';
 import {toSignal} from '@angular/core/rxjs-interop';
-import {filter} from 'rxjs';
+import {filter, skip} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +29,7 @@ export class App {
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
+      skip(1),
     ).subscribe(() => {
       this.doc.getElementById('main-content')?.focus();
     });
