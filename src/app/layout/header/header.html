@@ -1,8 +1,8 @@
 <header #headerEl>
   <div class="limiter" *transloco="let t">
-    <details class="nav-menu" [attr.open]="isDesktop() || null">
+    <details class="nav-menu" [attr.open]="(isDesktop() || isMenuOpen()) || null">
       <summary [attr.aria-label]="t(isMenuOpen() ? 'nav.closeMenu' : 'nav.openMenu')"
-      (click)="isMenuOpen.update(v => !v)">
+      (click)="$event.preventDefault(); isMenuOpen.update(v => !v)">
         ☰
       </summary>
       <nav [attr.aria-label]="t('nav.mainNav')">
@@ -11,22 +11,32 @@
             <a [routerLink]="toPath('')"
                routerLinkActive="active"
                [routerLinkActiveOptions]="{ exact: true }"
-               ariaCurrentWhenActive="page">
+               ariaCurrentWhenActive="page"
+               (click)="closeMenu()">
               {{ t('nav.about') }}
             </a>
           </li>
           <li>
-            <a [routerLink]="toPath('projects')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <a [routerLink]="toPath('projects')"
+               routerLinkActive="active"
+               ariaCurrentWhenActive="page"
+               (click)="closeMenu()">
               {{ t('nav.projects') }}
             </a>
           </li>
           <li>
-            <a [routerLink]="toPath('tech-stack')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <a [routerLink]="toPath('tech-stack')"
+               routerLinkActive="active"
+               ariaCurrentWhenActive="page"
+               (click)="closeMenu()">
               {{ t('nav.techstack') }}
             </a>
           </li>
           <li>
-            <a [routerLink]="toPath('contact')" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <a [routerLink]="toPath('contact')"
+               routerLinkActive="active"
+               ariaCurrentWhenActive="page"
+               (click)="closeMenu()">
               {{ t('nav.contact') }}
             </a>
           </li>

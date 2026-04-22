@@ -35,6 +35,10 @@ export class Header {
     });
   }
 
+  closeMenu() {
+    this.isMenuOpen.set(false);
+  }
+
   toPath(path: string) {
     return this.langService.routerLinkToPath(path);
   }
