@@ -26,8 +26,6 @@ article {
   }
 }
 
-/* ── Photo column ────────────────────── */
-
 .photo-col {
   display: grid;
   grid-template-columns: 1fr;
@@ -62,17 +60,12 @@ article {
   max-width: 220px;
 }
 
-.social-profiles {
-  display: flex;
-  gap: 0.5rem;
-}
-
 .social a {
   display: inline-flex;
   gap: 4px;
   justify-content: center;
   align-items: center;
-  padding: 7px 16px;
+  padding: 8px 16px;
   border-radius: 980px;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -87,7 +80,15 @@ article {
   }
 }
 
-/* ── Content column ──────────────────── */
+.social-profiles {
+  display: flex;
+  gap: 0.5rem;
+  /*TODO: After re-adding CV, remove this Block */
+  flex-direction: column;
+  & a {
+    padding: 14px 16px;
+  }
+}
 
 .content {
   display: flex;
